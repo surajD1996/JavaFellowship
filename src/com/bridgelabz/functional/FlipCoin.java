@@ -1,3 +1,11 @@
+/*******************************************************************************************
+ *  Purpose	 	to find percentage of head and tails after fliping a coin number of times
+ *  @author  	Suraj
+ *  @version 	1.0
+ *  @since   	21-08-2019
+ *
+ ******************************************************************************************/
+
 package com.bridgelabz.functional;
 
 import java.util.Random;
@@ -21,14 +29,13 @@ public class FlipCoin
 		{
 			 coinTossedArray[count] =  0 + (int)random.nextInt(2);
 		}
-		for(count = 0;count < numberOfTosses;count++)
-		{
-			System.out.println(coinTossedArray[count]);
-		}
+		/*
+		 * for(count = 0;count < numberOfTosses;count++) {
+		 * System.out.println(coinTossedArray[count]); }
+		 */
 		headPercentage = Utility.flipCoin(coinTossedArray);
 		System.out.println("Head Win = "+headPercentage);
 		System.out.println("Tails Win = "+(100 - headPercentage));
-				
 	}
 
 }

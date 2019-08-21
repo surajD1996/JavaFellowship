@@ -1,3 +1,10 @@
+/*******************************************************************************************
+ *  Purpose	 	tic tac toe game with computer
+ *  @author  	Suraj
+ *  @version 	1.0
+ *  @since   	21-08-2019
+ *
+ ******************************************************************************************/
 package com.bridgelabz.functional;
 
 import java.util.Random;
