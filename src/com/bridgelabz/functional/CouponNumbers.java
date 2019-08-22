@@ -16,11 +16,8 @@ public class CouponNumbers
 	{
 		System.out.println("Enter How Many Coupon Numbers You Want");
 		int input = Utility.scanInt();
-		int answer[]=new int[input];
+		int answer = 0;
 		answer = Utility.couponNumbers(input);
-		for(int i = 0;i<input;i++)
-		{
-			System.out.println(answer[i]);
-		}		
+		System.out.println("we need to generate "+answer+" numbers to generate "+input+" distinct Coupons");		
 	}
 }

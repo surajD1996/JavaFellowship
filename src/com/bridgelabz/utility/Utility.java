@@ -240,35 +240,28 @@ public class Utility
 		
 	}
 
+	
 	/**
-	 * purpose 		to generate distinct coupon numbers
-	 * @param input	the count of coupon numbers 
-	 * @return		array of the coupon numbers
+	 * @param input	number of coupons
+	 * @return	randomCount this number of times we need to generate the random numbers
 	 */
-	public static int[] couponNumbers(int input) 
+	public static int couponNumbers(int input) 
 	{
-		Random random = new Random();	
-		int couponNumbers[] = new int[input];
-		couponNumbers[0] = 111 + (int)random.nextInt(1000);
-		int iCnt=0;
-		for(int count = 0;count < input; count++)
+		int randomCount = 0;
+		boolean isCouponAvailable[] = new boolean[input];
+		int randomNumber = 0;
+		int count = 0;
+		while(count!=input)
 		{
-			int temporary = 100 + (int)random.nextInt(900);
-			for(int j = 0;j<input;j++)
+			randomCount++;
+			randomNumber = (int) (Math.random()*input);
+			if(isCouponAvailable[randomNumber]==false)
 			{
-				if(temporary==couponNumbers[j])
-				{
-					break;
-				}
-				else
-				{
-					iCnt++;
-					couponNumbers[count] = temporary;
-				}
-			}
+				count++;
+				isCouponAvailable[randomNumber] = true;
+			}	
 		}
-		System.out.println(iCnt);
-		return couponNumbers;
+		return randomCount;
 	}
 
 	/**
@@ -452,4 +445,242 @@ public class Utility
 		double effectiveTemperature = 35.74 + (0.6215 * temperature) + ((0.4275 * temperature) - 35.75) * (Math.pow(speed,0.16)); 
 		return effectiveTemperature;
 	}
+	
+	/**
+	 * purpose 	gives the percentage of win of a person in gambling
+	 * @param stake
+	 * @param goal
+	 * @param trails
+	 */
+	public static void GamblingSimulator(int stake, int goal, int trails)
+	{
+		int temp = 0;
+		double compare;
+		double percentage;
+		int win = 0, choice;
+		
+		
+		Random random = new Random();
+		while((stake!=0)&&(goal!=stake)&&(temp!=trails))
+		{				
+			System.out.println("Enter Your choice Either 0 or 1");
+			choice = Utility.scanInt();
+			//compare = Math.random();
+			compare =  0 + (int)random.nextInt(2);
+			System.out.println("Compare = "+(int)compare);
+			if(choice == compare)
+			{
+				stake++;
+				System.out.println("stake = "+(int)stake);
+				win++;
+			}
+			else
+			{
+				goal = goal=2;
+			}
+			temp++;		
+		}
+		System.out.println("Number of wins = "+win);
+		percentage = 100*win/trails;
+		System.out.println("Win Percentage = "+percentage);
+	}
+	private static int[] sortArrayIntegers(int[] array) 
+	{
+		int temp = 0;
+		for(int i =0;i<array.length;i++)
+		{
+			
+			for(int j = i+1;j<array.length;j++)
+			{
+				if(array[i]>array[j])
+				{
+					
+				}
+			}
+		}
+		return null;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	public static int binarySearchIntegers(int[] array) 
+	{
+		array = sortArrayIntegers(array);
+		return 0;
+	}
+
+	/**
+	 * Purpose 	calculates minimum number of Notes and the 
+	 * 			Notes to be returned by the Vending Machine
+	 * @param amount	the amount of which we need to find 
+	 * 					minimum number of notes
+	 */
+	public static void vendingMachine(int amount) 
+       {
+              int cnt1000 = 0;
+              int cnt500 = 0;
+              int cnt100 = 0;
+              int cnt50 = 0;
+              int cnt20 = 0;
+              int cnt10 = 0;
+              int cnt5 = 0;
+              
+              while(amount!=0)
+              {
+            	  if(amount >= 1000)
+            	  {
+            		  cnt1000++;
+            		  amount = amount - 1000;
+            	  }
+            	  else if((amount<1000)&&(amount>=500))
+            	  {
+            		  cnt500++;
+            		  amount = amount - 500;
+            		  //System.out.println("500");
+            	  }
+            	  else if((amount<500)&&(amount>=100))
+            	  {
+            		  cnt100++;
+            		  amount = amount - 100;
+            		  //System.out.println("100");
+            	  }
+            	  else if((amount<100)&&(amount>=50))
+            	  {
+            		  cnt50++;
+            		  amount = amount - 50;
+            		  //System.out.println("100");
+            	  }
+            	  else if((amount<50)&&(amount>=20))
+            	  {
+            		  cnt20++;
+            		  amount = amount - 20;
+            		  //System.out.println("100");
+            	  }
+            	  else if((amount<20)&&(amount>=10))
+            	  {
+            		  cnt10++;
+            		  amount = amount - 10;
+            		  //System.out.println("100");
+            	  }
+            	  else if((amount<10)&&(amount>=5))
+            	  {
+            		  cnt50++;
+            		  amount = amount - 5;
+            		  //System.out.println("100");
+            	  }
+              }              
+              if(cnt1000!=0)
+              {
+                     System.out.println((cnt1000)+" notes of 1000");
+              }
+              if(cnt500!=0)
+              {
+                     System.out.println((cnt500)+" notes of 500");
+              }
+              
+              if(cnt100!=0)
+              {
+                     System.out.println((cnt100)+" notes of 100");
+              }
+              
+              if(cnt50!=0)
+              {
+                     System.out.println((cnt50)+" notes of 50");
+              }
+              
+              if(cnt20!=0)
+              {
+                     System.out.println((cnt20)+" notes of 20");
+              }
+              
+              if(cnt10!=0)
+              {
+                     System.out.println((cnt10)+" notes of 10");
+              }
+              
+              if(cnt5!=0)
+              {
+                     System.out.println((cnt5)+" notes of 5");
+              }      
+       }
+		
+	/**
+	 * Purpose 	Converts the decimal number into binary
+	 * @param 	decimalNumber	input decimal number
+	 * @return	reverse			binary number of input decimal number
+	 */
+	public static String binaryConversion(int decimalNumber) 
+	{
+		int temporary = decimalNumber;
+		int bit=0;
+		String reverse="0";
+		String binaryNumber = "0";
+		while(temporary!=0)
+		{
+			bit = temporary%2;
+			temporary = temporary/2;
+			binaryNumber = binaryNumber+bit;
+			
+		}
+		int cnt=0;
+		int length = binaryNumber.length();
+		
+		for(cnt=length-1;cnt>0;cnt--)
+		{
+			reverse=reverse+binaryNumber.charAt(cnt);
+			
+		}
+		
+		return reverse;
+	}
+	
+	
+	/**
+	 * Purpose 	finds the day of the week 
+	 * @param month	input month 
+	 * @param date	input date
+	 * @param year
+	 * @return
+	 */
+	public static int dayOfWeek(int month, int date, int year) {
+		if(month>12||date>31)
+		{
+			return -1;
+		}
+        int y = year - (14 - month) / 12;
+        int x = y + y/4 - y/100 + y/400;
+        int m = month + 12 * ((14 - month) / 12) - 2;
+        int day = (date + x + (31*m)/12) % 7;
+        return day;
+    }
+	
+	/**
+	 * purpose 		Converts temperature from celcius to Fahrenit  
+	 * @param 		celcius 					temperature to be converted
+	 * @return		temperatureInFahrenheit 	gives converted temperature to fahrenite
+	 */
+	public static double temperatureToFahrenit(double celsius) 
+	{
+		double temperatureInFahrenheit = (celsius * (9/5)) + 32;
+		return temperatureInFahrenheit;
+	}
+	
+	
+	/**
+	 * purpose 		Converts temperature from celcius to Fahrenit
+	 * @param 		fahrenite 				temperature to be converted
+	 * @return		temperatureInCelsius	gives converted temperature to fahrenite
+	 */
+	public static float temperatureToCelsius(float fahrenite) 
+	{
+		float temperatureInCelsius = (fahrenite * (9/5)) + 32;
+		return temperatureInCelsius;
+	}
+	
 }

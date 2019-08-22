@@ -9,21 +9,45 @@ package com.bridgelabz.functional;
 
 import java.util.Random;
 
+import com.bridgelabz.utility.Utility;
+
 public class TicTacToe 
 {
 
 	public static void main(String[] args) 
 	{
 		int array[][] = new int[3][3];
+		boolean chance = false;
 		Random random = new Random();
-		for(int i = 0;i<3;i++)
+		int temp = 0;
+		int row = 0;
+		int column = 0;
+		for(int i = 0;i < array.length;i++)
 		{
-			for(int j=0;j<3;j++)
+			for(int j = 0;j < array[i].length;j++)
 			{
-				
+				if(chance == false)
+				{
+					row = 0 + (int)random.nextInt(2);
+					column = 0 + (int)random.nextInt(2);
+					temp = 1;
+					array[row][column] = temp;
+					chance = true;
+					
+					//if()
+					
+				}
+				else
+				{
+					System.out.println("Enter The Position ");
+					row = Utility.scanInt();
+					column = Utility.scanInt();
+					temp = 2;
+					array[row][column] = temp;
+					chance = false;
+				}
 			}
 		}
-		
 		
 
 	}
