@@ -1,3 +1,11 @@
+/*******************************************************************************************
+ *  Purpose	 	to calculate the percentage of win of a person in gambling
+ *  @author  	Suraj
+ *  @version 	1.0
+ *  @since   	21-08-2019
+ *
+ ******************************************************************************************/
+
 package com.bridgelabz.functional;
 
 import com.bridgelabz.utility.Utility;

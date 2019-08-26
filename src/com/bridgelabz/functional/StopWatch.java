@@ -1,9 +1,18 @@
+/*******************************************************************************************
+ *  Purpose	 	stop watch
+ *  @author  	Suraj
+ *  @version 	1.0
+ *  @since   	21-08-2019
+ *
+ ******************************************************************************************/
+
+
 package com.bridgelabz.functional;
 
 import com.bridgelabz.utility.Utility;
 
 public class StopWatch {
-
+	
 	public static void main(String[] args) 
 	{
 		System.out.println("Enter 0 to start stop watch");
@@ -13,9 +22,7 @@ public class StopWatch {
 		
 		if(start == 0)
 		{
-			startTime = System.currentTimeMillis();
-			
-			
+			startTime = System.currentTimeMillis();		
 		}
 		
 		System.out.println("Enter 1 to stop the stop watch");

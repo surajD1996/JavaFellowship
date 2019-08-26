@@ -1,4 +1,13 @@
-package com.bridgelabz.functional;
+/******************************************************************************
+ *  Purpose	 	to convert a decimal number to its binary number
+ *  @author  	Suraj
+ *  @version 	1.0
+ *  @since   	23-08-2019
+ *
+ ******************************************************************************/
+
+
+package com.bridgelabz.algorithm;
 
 import com.bridgelabz.utility.Utility;
 

@@ -8,6 +8,7 @@
 
 
 package com.bridgelabz.utility;
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 public class Utility 
@@ -327,6 +328,7 @@ public class Utility
 				}
 			}
 		}
+		
 	}
 	
 	/**
@@ -344,7 +346,7 @@ public class Utility
 			temp = temp/10;
 			reverse = reverse * 10 + digit;
 		}	
-		System.out.println(reverse);
+		
 		if(reverse == number)
 		{
 			return true;
@@ -484,37 +486,45 @@ public class Utility
 		percentage = 100*win/trails;
 		System.out.println("Win Percentage = "+percentage);
 	}
-	private static int[] sortArrayIntegers(int[] array) 
+	
+	/**
+	 * purpose				to search the input integer in the sorted array
+	 * @param  array		input array in which we need to search for the element
+	 * @param  inputNumber	input number to be searched in array
+	 * @return position 	position of the input number
+	 */
+	public static int binarySearchIntegers(int[] array, int inputNumber) 
 	{
-		int temp = 0;
-		for(int i =0;i<array.length;i++)
+		int position = 0;
+		array = bubbleSort(array);
+		int lowerIndex = 0;
+		int higherIndex = array.length-1;
+		int middleIndex = (array.length-1)/2;
+		while(lowerIndex<higherIndex)
 		{
-			
-			for(int j = i+1;j<array.length;j++)
+			if(inputNumber == array[middleIndex])
 			{
-				if(array[i]>array[j])
-				{
-					
-				}
+				position = middleIndex;
+				break;
 			}
+			else if(inputNumber<array[middleIndex])
+			{
+				higherIndex = middleIndex -1;
+			}
+			else
+			{
+				lowerIndex = middleIndex + 1;
+			}
+			middleIndex = (higherIndex+lowerIndex)/2;
 		}
-		return null;
+		return position;
+		
 	}
 	
 	
+	public static int notes[] = {1000,500,100,50,20,10,5};
+	public static int noteCount[] = new int[7];
 	
-	
-	
-	
-	
-	
-	
-	public static int binarySearchIntegers(int[] array) 
-	{
-		array = sortArrayIntegers(array);
-		return 0;
-	}
-
 	/**
 	 * Purpose 	calculates minimum number of Notes and the 
 	 * 			Notes to be returned by the Vending Machine
@@ -523,91 +533,57 @@ public class Utility
 	 */
 	public static void vendingMachine(int amount) 
        {
-              int cnt1000 = 0;
-              int cnt500 = 0;
-              int cnt100 = 0;
-              int cnt50 = 0;
-              int cnt20 = 0;
-              int cnt10 = 0;
-              int cnt5 = 0;
-              
-              while(amount!=0)
-              {
-            	  if(amount >= 1000)
-            	  {
-            		  cnt1000++;
-            		  amount = amount - 1000;
-            	  }
-            	  else if((amount<1000)&&(amount>=500))
-            	  {
-            		  cnt500++;
-            		  amount = amount - 500;
-            		  //System.out.println("500");
-            	  }
-            	  else if((amount<500)&&(amount>=100))
-            	  {
-            		  cnt100++;
-            		  amount = amount - 100;
-            		  //System.out.println("100");
-            	  }
-            	  else if((amount<100)&&(amount>=50))
-            	  {
-            		  cnt50++;
-            		  amount = amount - 50;
-            		  //System.out.println("100");
-            	  }
-            	  else if((amount<50)&&(amount>=20))
-            	  {
-            		  cnt20++;
-            		  amount = amount - 20;
-            		  //System.out.println("100");
-            	  }
-            	  else if((amount<20)&&(amount>=10))
-            	  {
-            		  cnt10++;
-            		  amount = amount - 10;
-            		  //System.out.println("100");
-            	  }
-            	  else if((amount<10)&&(amount>=5))
-            	  {
-            		  cnt50++;
-            		  amount = amount - 5;
-            		  //System.out.println("100");
-            	  }
-              }              
-              if(cnt1000!=0)
-              {
-                     System.out.println((cnt1000)+" notes of 1000");
-              }
-              if(cnt500!=0)
-              {
-                     System.out.println((cnt500)+" notes of 500");
-              }
-              
-              if(cnt100!=0)
-              {
-                     System.out.println((cnt100)+" notes of 100");
-              }
-              
-              if(cnt50!=0)
-              {
-                     System.out.println((cnt50)+" notes of 50");
-              }
-              
-              if(cnt20!=0)
-              {
-                     System.out.println((cnt20)+" notes of 20");
-              }
-              
-              if(cnt10!=0)
-              {
-                     System.out.println((cnt10)+" notes of 10");
-              }
-              
-              if(cnt5!=0)
-              {
-                     System.out.println((cnt5)+" notes of 5");
-              }      
+                            
+			
+            if(amount >= 1000)
+            {
+            	noteCount[0]++;
+            	amount = amount - 1000;
+            	//System.out.println("1000");
+            	vendingMachine(amount);
+            }
+            else if((amount<1000)&&(amount>=500))
+            {
+            	noteCount[1]++;
+            	amount = amount - 500;
+            	vendingMachine(amount);
+            	//System.out.println("500");
+            }
+            else if((amount<500)&&(amount>=100))
+            {
+            	noteCount[2]++;
+            	amount = amount - 100;
+            	vendingMachine(amount);
+            	//System.out.println("100");
+            }
+            else if((amount<100)&&(amount>=50))
+            {
+            	noteCount[3]++;
+            	amount = amount - 50;
+            	vendingMachine(amount);
+            	//System.out.println("100");
+            }
+            else if((amount<50)&&(amount>=20))
+            {
+            	noteCount[4]++;
+            	amount = amount - 20;
+            	vendingMachine(amount);
+            	//System.out.println("100");
+            }
+            else if((amount<20)&&(amount>=10))
+            {
+            	noteCount[5]++;
+            	amount = amount - 10;
+            	vendingMachine(amount);
+            	//System.out.println("100");
+            }
+            else if((amount<10)&&(amount>=5))
+            {
+            	noteCount[6]++;
+            	amount = amount - 5;
+            	vendingMachine(amount);
+            	//System.out.println("100");
+            }          
        }
 		
 	/**
@@ -682,5 +658,112 @@ public class Utility
 		float temperatureInCelsius = (fahrenite * (9/5)) + 32;
 		return temperatureInCelsius;
 	}
-	
+
+	/**
+	 * Purpose 	Sort elements of array using bubble sort algorithm
+	 * @param 	array		array of integers to be sorted
+	 * @return	array		array of sorted integers	
+	 */
+	public static int[] bubbleSort(int[] array) {
+		int i = 0, temp =0, pass = 0;
+		for(pass=1;pass<array.length;pass++)
+		{
+			for(i=0;i<array.length-pass;i++)
+			{
+				if(array[i]>array[i+1])
+				{
+					temp = array[i];
+					array[i] = array[i+1];
+					array[i+1] = temp;
+				}
+			}
+		}
+		return array;
+	}
+
+	public static float monthlyPayment(int loanAmount, int years, int rate) 
+	{
+		return 0;
+	}
+
+	public static String[] sortString(String first[]) 
+	{
+		
+		
+		String temp;
+		
+		for(int pass = 1; pass<first.length;pass++)
+		{
+			for(int i=0;i<first.length-1;i++)
+			{
+				if(first[i].compareTo(first[i+1])>0)
+				{
+					temp = first[i];
+					first[i] = first[i+1];
+					first[i+1] = temp;
+				}
+			}
+		}
+				
+		return first;
+	}
+
+	public static boolean anagramDetection(String first, String second) 
+	{
+		first = first.toLowerCase();
+		second = second.toLowerCase();
+		
+		char firstArray[] = first.toCharArray();
+		char secondArray[] = second.toCharArray();
+		
+		Arrays.sort(firstArray);
+		Arrays.sort(secondArray);
+		
+		boolean status = false;
+		
+		if(firstArray.length!=secondArray.length)
+		{
+			
+			status = false;
+		}
+		else
+		{
+			
+			if(Arrays.equals(firstArray,secondArray))
+			{
+				status = true;
+			}
+		}
+		
+		return status;
+		
+	}
+
+	public static void binarySearchString(String inputString[], String word) 
+	{
+		inputString = sortString(inputString);
+		int lowerIndex = 0;
+		int higherIndex = inputString.length-1;
+		int middleIndex = 0;
+		
+		int result =0;
+		while(lowerIndex<higherIndex)
+		{
+			result = inputString[middleIndex].compareTo(word);
+			if(result == 0)
+			{
+				System.out.println(middleIndex);
+				break;
+			}
+			else if(result<0)
+			{
+				higherIndex = middleIndex -1;
+			}
+			else
+			{
+				lowerIndex = middleIndex + 1;
+			}
+			middleIndex = (higherIndex+lowerIndex)/2;
+		}
+	}
 }

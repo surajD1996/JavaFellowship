@@ -1,4 +1,12 @@
-package com.bridgelabz.functional;
+/******************************************************************************
+ *  Purpose	 	converts temperature from celcius to fahrenheit or vice versa
+ *  @author  	Suraj
+ *  @version 	1.0
+ *  @since   	23-08-2019
+ *
+ ******************************************************************************/
+
+package com.bridgelabz.algorithm;
 
 import com.bridgelabz.utility.Utility;
 

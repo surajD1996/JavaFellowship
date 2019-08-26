@@ -20,22 +20,9 @@ public class ReplaceString
 		System.out.println(" Enter Your Name ");
 		String inputString = Utility.scanString();
 		
-		//String answer = Utility.replaceString(defaultString, inputString);
-		Utility.replaceString(defaultString, inputString);
-//		if(answer == null)
-//		{
-//			System.out.println("Please Enter Valid String");
-//		}
-//		else
-//		{
-//			for(int i = 0;i<answer.length();i++)
-//			{
-//				System.out.println(answer);
-//			}
-//			
-//		}
 		
-		//System.out.println(answer);
+		Utility.replaceString(defaultString, inputString);
+
 	}
 
 }

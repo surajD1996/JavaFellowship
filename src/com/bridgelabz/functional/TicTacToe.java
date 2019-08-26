@@ -28,11 +28,27 @@ public class TicTacToe
 			{
 				if(chance == false)
 				{
-					row = 0 + (int)random.nextInt(2);
-					column = 0 + (int)random.nextInt(2);
-					temp = 1;
-					array[row][column] = temp;
-					chance = true;
+					row = 0 + (int)random.nextInt(3);
+					column = 0 + (int)random.nextInt(3);
+					
+					if(array[row][column]==0)
+					{
+						array[row][column]=1;
+						chance = true;
+						for(int k=0;k<array.length;k++)
+						{
+							for(int l =0;l<array[i].length;l++)
+							{
+								if(k==0)
+								{
+									if((array[k][l]==array[k][l+1])&&(array[k][l+1])==array[k][l+2])
+									{}
+								}
+							}
+							
+						}
+					}
+					
 					
 					//if()
 					

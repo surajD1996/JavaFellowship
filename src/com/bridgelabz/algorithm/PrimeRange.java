@@ -7,7 +7,7 @@
  ******************************************************************************/
 
 
-package com.bridgelabz.functional;
+package com.bridgelabz.algorithm;
 
 import com.bridgelabz.utility.Utility;
 
