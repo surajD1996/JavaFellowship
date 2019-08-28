@@ -478,9 +478,9 @@ public class Utility
 			}
 			else
 			{
-				goal = goal=2;
+				goal=goal-1;
 			}
-			temp++;		
+			temp++;	
 		}
 		System.out.println("Number of wins = "+win);
 		percentage = 100*win/trails;
@@ -765,5 +765,20 @@ public class Utility
 			}
 			middleIndex = (higherIndex+lowerIndex)/2;
 		}
+	}
+	
+	public static int[] midElement(int[] nums) {
+	    int[] a;
+	    if (nums.length %2 == 0) {
+	        // even-length array (two middle elements)
+	        a = new int[2];
+	        a[0] = nums[(nums.length/2) - 1];
+	        a[1] = nums[nums.length/2];
+	    } else {
+	        // odd-length array (only one middle element)
+	        a = new int[1];
+	        a[0] = nums[nums.length/2];
+	    }
+	    return a;
 	}
 }

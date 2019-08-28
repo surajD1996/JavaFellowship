@@ -4,7 +4,7 @@ import com.bridgelabz.utility.Utility;
 
 public class InsertionSort{
 
-	public static void main(String[] args) 
+	public static void main(String[] args)
 	{
 		System.out.println("Enter The Number Of Elements in Array");
 		int length = Utility.scanInt();
@@ -28,7 +28,6 @@ public class InsertionSort{
 			{
 				inputArray[j] = inputArray[j-1];
 				j--;
-				
 			}
 			inputArray[j] = key;
 		}
