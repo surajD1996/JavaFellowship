@@ -1,6 +1,7 @@
 package com.bridgelabz.datastructures;
 
-public class UnorderedList {
+public class BalancedParanthesis 
+{
 
 	public static void main(String[] args) 
 	{

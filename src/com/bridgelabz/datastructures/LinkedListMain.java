@@ -1,19 +1,21 @@
 package com.bridgelabz.datastructures;
 
+import com.bridgelabz.utility.LinkedListX;
+
 public class LinkedListMain <T>
 {
 	public static <T>void main(String[] args) 
 	{
 		LinkedListX <T> list = new LinkedListX<T>();
-		list.insert("Hello");
-		list.insert("Suraj");
-		list.insert("abc");
+		list.insert(5);
+		list.insert(15);
+		list.insert(25);
 		
 		list.displayNodes();
-		list.insertAtFirst("xyz");
+		list.insertAtFirst(10);
 		list.displayNodes();
 		
-		list.insertLast("pqr");
+		list.insertLast(20);
 		list.displayNodes();
 		
 		int count = list.countNodes();

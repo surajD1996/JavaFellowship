@@ -1,4 +1,4 @@
-package com.bridgelabz.datastructures;
+package com.bridgelabz.utility;
 
 public class LinkedListX <T>
 {
@@ -44,7 +44,6 @@ public class LinkedListX <T>
 			while(n.next!=null)
 			{
 				n=n.next;
-				
 			}
 			n.next=node;
 			node.next = null;
@@ -54,8 +53,8 @@ public class LinkedListX <T>
 	
 	
 	/**
-	 * purpose 			insert element in the linked list
-	 * @param string	
+	 * purpose 	insert element in the linked list at the end
+	 * @param 	string	data of the node	
 	 */
 	public  void insert(Object string)
 	{
@@ -84,6 +83,10 @@ public class LinkedListX <T>
 		
 	}
 	
+	/**
+	 * Purpose	to count the elements from the linked list
+	 * @return	nodeCount 	count of nodes
+	 */
 	public int countNodes()
 	{
 		Node<T> node = new Node<T>();
@@ -97,6 +100,9 @@ public class LinkedListX <T>
 		return nodeCount;
 	}
 	
+	/**
+	 * Purpose 	displays all nodes of linked list
+	 */
 	public void displayNodes()
 	{
 		Node<T> node = new Node<T>();
@@ -110,6 +116,12 @@ public class LinkedListX <T>
 		
 	}
 	
+	/**
+	 * Purpose 	search the element in the linked list
+	 * @param  	word	 the element which should be searched in linked list	 
+	 * @param   length 	 total number of nodes in linked list 
+	 * @return	position the position of the searched element
+	 */
 	public int search(Object word, int length)
 	{
 		Node<T> node = new Node<T>();
@@ -134,6 +146,10 @@ public class LinkedListX <T>
 		}
 	}
 
+	/**
+	 * Purpose 	delete the element of particular position
+	 * @param position	the position from which the element should be deleted
+	 */
 	public void deletAtPosition(int position) 
 	{
 		int count = 1;
@@ -160,6 +176,11 @@ public class LinkedListX <T>
 		
 	}
 	
+	/**
+	 * Purpose 	converts linked list elements to a string array
+	 * @param 	length	 total numbers of nodes from linked list
+	 * @return	strArray is array of elements from linked list
+	 */
 	public String[] convertToStringArray(int length)
 	{
 		int i = 0;
