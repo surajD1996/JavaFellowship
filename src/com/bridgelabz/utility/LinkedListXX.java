@@ -31,10 +31,23 @@ public class LinkedListXX
 		{
 			Node tempNode = new Node();
 			tempNode = head;
-			while(!((newNode.data<tempNode.data)&&(newNode.data>tempNode.next.data)))
+			while(true)
 			{
-				count++;
-				tempNode = tempNode.next;
+				if(newNode.data<head.data)
+				{
+					addAtFirst(newNode);
+					break;
+				}
+				else if((newNode.data>tempNode.data))
+				{
+					count++;
+					tempNode = tempNode.next;
+					if(newNode.data<tempNode.data)
+					{
+						addAtPosition(count, newNode);
+						break;
+					}
+				}
 			}
 		}
 		

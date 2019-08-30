@@ -19,11 +19,17 @@ public class OrderedList
 //		}
 		
 		orderedList.add(10);
-		orderedList.add(25);
-//		orderedList.add(16);
-//		orderedList.add(5);
+		orderedList.add(5);
+		orderedList.add(8);
+		orderedList.add(7);
+		orderedList.add(4);
+		orderedList.add(2);
+		orderedList.add(9);
+//		orderedList.add(11);
 //		orderedList.add(30);
-//		orderedList.display();
+//		orderedList.add(13);
+//		orderedList.add(40);
+		orderedList.display();
 
 	}
 
