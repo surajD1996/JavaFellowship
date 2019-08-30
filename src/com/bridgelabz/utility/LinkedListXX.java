@@ -19,65 +19,88 @@ public class LinkedListXX
 		{
 			head = newNode;
 		}
-		else if((head.next == null)&&(newNode.data<head.data))
-		{
-			addAtFirst(newNode);
-		}
-		else if((head.next == null)&&(newNode.data>head.data))
-		{
-			addAtLast(newNode);
-		}
+
+
 		else 
 		{
 			Node tempNode = new Node();
 			tempNode = head;
-			while(true)
+			Node temp = head;
+		while(true)
+		{
+			if(newNode.data<head.data)
 			{
-				if(newNode.data<head.data)
+				addAtFirst(newNode);
+				break;
+			}
+			else if((newNode.data>tempNode.data))
+			{
+				count++;
+				tempNode = tempNode.next;
+				if(newNode.data<tempNode.data)
 				{
-					addAtFirst(newNode);
+					addAtPosition(count, newNode);
 					break;
 				}
-				else if((newNode.data>tempNode.data))
+				else if(newNode.data>tempNode.data)
 				{
 					count++;
 					tempNode = tempNode.next;
-					if(newNode.data<tempNode.data)
+					if(newNode.data>tempNode.data&&newNode.data<tempNode.next.data)
 					{
-						addAtPosition(count, newNode);
-						break;
+					addAtPosition(count, newNode);
+					
 					}
+					break;
+				
 				}
 			}
-		}
 		
-//		else if((new Node.data > head.data)&&(newNode.data<head.next.data))
-//		{
-//			count++;
-//		}
+		}
+	}
+		
+		//	else if((new Node.data > head.data)&&(newNode.data<head.next.data))
+		//	{
+		//	count++;
+		//	}
+		//	else
+		//	{
+		//	Node tempNode = new Node();
+		//	tempNode = head;
+		//	while(tempNode.next.next != null)
+		//	{
+		//	if((item>tempNode.data)&&(item<tempNode.next.data))
+		//	{
+		//	count++;
+		//	addAtPosition(count, newNode);
+		//	break;
+		//	}
+		//	else if((item>tempNode.data)&&(item>tempNode.next.data))
+		//	{
+		//	count++;
+		//	}
+		//	else
+		//	{
+		//	
+		//	}
+		//	}	
+		//	}	
+		}
 //		else
 //		{
-//			Node tempNode = new Node();
-//			tempNode = head;
-//			while(tempNode.next.next != null)
+//			Node tempNode = head;
+//			while(tempNode.next != null)
 //			{
-//				if((item>tempNode.data)&&(item<tempNode.next.data))
-//				{
-//					count++;
-//					addAtPosition(count, newNode);
-//					break;
-//				}
-//				else if((item>tempNode.data)&&(item>tempNode.next.data))
-//				{
-//					count++;
-//				}
-//				else
-//				{
-//					
-//				}
-//			}	
-//		}	
-	}
+//				tempNode = tempNode.next;
+//			}
+//			tempNode.next = newNode;
+//			
+//		}
+		
+	
+	
+	
+	
 	 
 	private void addAtFirst(Node newNode)
 	{
@@ -123,4 +146,20 @@ public class LinkedListXX
 		}
 	}
 	
+	public void sortAscending(int length)
+	{
+		
+		for(int i = 0; i<length; i++)
+		{
+			Node tempNode = head;
+			int temp = tempNode.data;
+			while(tempNode!=null)
+			{
+				if(temp>tempNode.data)
+				{
+					
+				}
+			}
+		}
+	}
 }

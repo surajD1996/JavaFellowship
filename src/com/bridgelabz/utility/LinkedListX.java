@@ -11,7 +11,7 @@ public class LinkedListX <T>
 	public void insertAtFirst(Object data)
 	{
 		Node <T> node = new Node<T>();
-		node.data = data;
+		node.data = (T) data;
 		if(head == null)
 		{
 			head = node;
@@ -31,7 +31,7 @@ public class LinkedListX <T>
 	public void insertLast(Object data)
 	{
 		Node <T> node = new Node<T>();
-		node.data = data;
+		node.data = (T) data;
 		
 		if(head == null)
 		{
@@ -60,7 +60,7 @@ public class LinkedListX <T>
 	{
 		
 		Node<T> node = new<T> Node();
-		node.data = string;
+		node.data = (T) string;
 		node.next = null;
 		
 		if(head==null)
