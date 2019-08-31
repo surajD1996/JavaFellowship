@@ -53,16 +53,34 @@ public class DequeUtility <T>
 	public Object removeRear()
 	{
 		size--;
+		Object deleted = null;
+		
 		Node <T> tempNode = new Node<T>();
 		tempNode = front;
-		while(tempNode.next.next!=null)
+		if(tempNode == null)
 		{
-			tempNode = tempNode.next;
+			System.out.println("Linked List is Empty");
 		}
-		rear = tempNode;
-		tempNode = tempNode.next;
-		Object deleted = tempNode.data;
-		tempNode = null;
+		else if(tempNode.next==null)
+		{
+			deleted = tempNode.data;
+			tempNode = null;
+		}
+		else
+		{
+			while(tempNode.next!=rear)
+			{
+				
+				tempNode = tempNode.next;
+			}
+			rear = tempNode;
+			
+			tempNode = tempNode.next;
+			deleted = tempNode.data;
+			rear.next = null;
+			tempNode = null;
+		}
+		
 		return deleted;
 	}
 

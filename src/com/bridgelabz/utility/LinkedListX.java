@@ -110,10 +110,10 @@ public class LinkedListX <T>
 		
 		while(node!=null)
 		{
-			System.out.println(node.data);
+			System.out.print(node.data+" ");
 			node = node.next;
 		}
-		
+		System.out.println(" ");
 	}
 	
 	/**
@@ -145,6 +145,31 @@ public class LinkedListX <T>
 			return position;
 		}
 	}
+	
+	/**
+	 * purpose 	deletes last element of the linked list
+	 * 
+	 */
+	public void deleteLast()
+	{
+		Node<T> tempNode = new Node<T>();
+		tempNode = head;
+		if(tempNode.next==null)
+		{
+			
+		}
+		else
+		{
+			while(tempNode.next.next!=null)
+			{
+				tempNode = tempNode.next;
+			}
+		}
+		
+		System.out.println(tempNode.next.data);
+		tempNode.next = null;
+	}
+	
 
 	/**
 	 * Purpose 	delete the element of particular position

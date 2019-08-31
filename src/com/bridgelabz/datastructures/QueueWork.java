@@ -33,6 +33,18 @@ public class QueueWork {
 		System.out.println("Removed = "+deleted);
 		queue.viewQueue();
 		
+		System.out.println("Removed = "+deleted);
+		queue.viewQueue();
+		
+		deleted = queue.dequeue();
+		System.out.println("Removed = "+deleted);
+		
+		deleted = queue.dequeue();
+		System.out.println("Removed = "+deleted);
+		
+		deleted = queue.dequeue();
+		System.out.println("Removed = "+deleted);
+		
 		boolean queueStatus = queue.isEmpty();
 		if(queueStatus==true)
 		{

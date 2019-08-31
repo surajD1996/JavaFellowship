@@ -358,8 +358,9 @@ public class Utility
 	}
 
 	/**
-	 * @param lowerLimit
-	 * @param upperLimit
+	 * purpose 	gives prime numbers and pallindrome numbers in the given range 
+	 * @param lowerLimit	lower limit provided by user
+	 * @param upperLimit	higher limit provided by user
 	 */
 	public static void primeRange(int lowerLimit, int upperLimit) 
 	{
@@ -780,5 +781,21 @@ public class Utility
 	        a[0] = nums[nums.length/2];
 	    }
 	    return a;
+	}
+
+	public static int deposit(int cashAvailble) 
+	{
+		System.out.println("Enter The Amount to Deposite");
+		int amountToDeposit = scanInt();
+		cashAvailble = cashAvailble+amountToDeposit;
+		return cashAvailble;
+	}
+
+	public static int withdraw(int cashAvailable) 
+	{
+		System.out.println("Enter The Amount to Withdraw");
+		int amountToWithdraw = scanInt();
+		cashAvailable = cashAvailable - amountToWithdraw;
+		return cashAvailable;
 	}
 }

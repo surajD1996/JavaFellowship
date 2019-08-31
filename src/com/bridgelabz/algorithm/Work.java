@@ -17,6 +17,16 @@ public class Work
 		{
 			System.out.println(Math.random());
 		}
+//		
+//		char a = 'a';
+//		char b = 'a';
+//		if(a==b)
+//		{
+//			System.out.println("yes");
+//		}
+//		else
+//			System.out.println("no");
+//			
 		
 	}
 

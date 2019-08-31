@@ -25,34 +25,44 @@ public class QueueUtility<T>
 	
 	public Object dequeue()
 	{
+		Object data;
 		Node<T> tempNode = new Node<T>();
 		tempNode = front;
 		if(front.next==null)
 		{
 			size--;
-			return front.data;
+			data = front.data;
+			front = null;			
 		}
 		else
 		{
 			size--;
 			front = front.next;
-			Object tempData =  tempNode.data;
-			tempNode = null;
-			return tempData;
+			 data =  tempNode.data;
+			tempNode = null;			
 		}
+		return data;
 	}
 	
 	public void viewQueue()
 	{
 		Node<T> tempNode = new Node<T>();
 		tempNode = front;
-		System.out.print("Queue = ");
-		while(tempNode!=null)
+		if(front==null)
 		{
-			System.out.print("  "+tempNode.data);
-			tempNode = tempNode.next;
+			System.out.println("Queue is Empty");
 		}
-		System.out.println("");
+		else
+		{
+			System.out.print("Queue = ");
+			while(tempNode!=null)
+			{
+				System.out.print("  "+tempNode.data);
+				tempNode = tempNode.next;
+			}
+			System.out.println("");
+		}
+		
 	}
 	
 	public boolean isEmpty()

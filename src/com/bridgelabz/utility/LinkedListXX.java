@@ -1,8 +1,8 @@
 package com.bridgelabz.utility;
 
-public class LinkedListXX 
+public class LinkedListXX <T>
 {
-	public Node head;
+	public Node  <T>head;
 	public void orderedList()
 	{
 		head.data = 0;
@@ -12,7 +12,7 @@ public class LinkedListXX
 	public void add(int item)
 	{
 		int count = 1;
-		Node newNode = new Node();
+		Node  <T>newNode = new Node <T>();
 		newNode.data = item;
 		
 		if(head == null)
@@ -23,40 +23,40 @@ public class LinkedListXX
 
 		else 
 		{
-			Node tempNode = new Node();
+			Node  <T>tempNode = new Node <T>();
 			tempNode = head;
-			Node temp = head;
-		while(true)
-		{
-			if(newNode.data<head.data)
-			{
-				addAtFirst(newNode);
-				break;
-			}
-			else if((newNode.data>tempNode.data))
-			{
-				count++;
-				tempNode = tempNode.next;
-				if(newNode.data<tempNode.data)
-				{
-					addAtPosition(count, newNode);
-					break;
-				}
-				else if(newNode.data>tempNode.data)
-				{
-					count++;
-					tempNode = tempNode.next;
-					if(newNode.data>tempNode.data&&newNode.data<tempNode.next.data)
-					{
-					addAtPosition(count, newNode);
-					
-					}
-					break;
-				
-				}
-			}
-		
-		}
+			Node  <T>temp = head;
+//		while(true)
+//		{
+//			if(newNode.data<head.data)
+//			{
+//				addAtFirst(newNode);
+//				break;
+//			}
+//			else if((newNode.data>tempNode.data))
+//			{
+//				count++;
+//				tempNode = tempNode.next;
+//				if(newNode.data<tempNode.data)
+//				{
+//					addAtPosition(count, newNode);
+//					break;
+//				}
+//				else if(newNode.data>tempNode.data)
+//				{
+//					count++;
+//					tempNode = tempNode.next;
+//					if(newNode.data>tempNode.data&&newNode.data<tempNode.next.data)
+//					{
+//					addAtPosition(count, newNode);
+//					
+//					}
+//					break;
+//				
+//				}
+//			}
+//		
+//		}
 	}
 		
 		//	else if((new Node.data > head.data)&&(newNode.data<head.next.data))
@@ -146,20 +146,20 @@ public class LinkedListXX
 		}
 	}
 	
-	public void sortAscending(int length)
-	{
-		
-		for(int i = 0; i<length; i++)
-		{
-			Node tempNode = head;
-			int temp = tempNode.data;
-			while(tempNode!=null)
-			{
-				if(temp>tempNode.data)
-				{
-					
-				}
-			}
-		}
-	}
+//	public void sortAscending(int length)
+//	{
+//		
+//		for(int i = 0; i<length; i++)
+//		{
+//			Node tempNode = head;
+//			int temp = tempNode.data;
+//			while(tempNode!=null)
+//			{
+//				if(temp>tempNode.data)
+//				{
+//					
+//				}
+//			}
+//		}
+//	}
 }

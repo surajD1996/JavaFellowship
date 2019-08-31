@@ -2,9 +2,9 @@ package com.bridgelabz.utility;
 
 public class Node2 
 {
-	int data;
-	Node2 next;
-	Node2 prev;
+	public int data;
+	public Node2 next;
+	public Node2 prev;
 	
 	public void Node2()
 	{
