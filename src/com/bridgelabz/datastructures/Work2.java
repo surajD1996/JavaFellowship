@@ -3,15 +3,15 @@ package com.bridgelabz.datastructures;
 import com.bridgelabz.utility.Node;
 
 
-public class Work2 
+public class Work2 <T>
 {
-	Node head;
+	Node <T> head;
 	public int size;
-	public void add(String data)
+	public void add(Object arr)
 	{
 		size++;
-		Node newNode = new Node();
-		newNode.data = data;
+		Node <T>newNode = new Node<T>();
+		newNode.data = arr;
 		if(head == null)
 		{
 			head = newNode;
@@ -30,8 +30,8 @@ public class Work2
 	
 	public void sort()
 	{
-		Node current=head;
-		Node index=null;
+		Node <T>current=head;
+		Node <T>index=null;
 		int temp;
 	
 		if(head==null)
@@ -47,7 +47,7 @@ public class Work2
 			
 				while(index!=null)
 				{
-					//Use bubble sort 
+					//Used bubble sort 
 					if((int)current.data > (int)index.data)
 					{  
 						temp = (int) current.data;  
@@ -64,7 +64,7 @@ public class Work2
 	
 	public void display()
 	{
-		Node tempNode = head;
+		Node <T>tempNode = head;
 		while(tempNode != null)
 		{
 			System.out.print("  "+tempNode.data);

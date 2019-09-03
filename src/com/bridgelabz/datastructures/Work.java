@@ -38,15 +38,17 @@ public class Work <T>
 		String word = Utility.scanString();
 		int position = list.search(word, length);
 		System.out.println("Element found at position "+position);
+
+		FileWriter fr = new FileWriter(file);
+		BufferedWriter brw = new BufferedWriter(fr);
+		String finalString = " ";
 		if(position!=-1)
 		{
-			FileWriter fr = new FileWriter(file, true);
-			BufferedWriter brw = new BufferedWriter(fr);
 			list.deletAtPosition(position);
 			list.displayNodes();
 			length = list.countNodes();
 			String newString[] = list.convertToStringArray(length);
-			String finalString = " ";
+			
 			for(int i = 0;i<newString.length;i++)
 			{
 				
@@ -54,27 +56,27 @@ public class Work <T>
 				
 			}
 			
-//			brw.write(finalString);
-//			brw.close();
-//			fr.close();
+			
 		}
 		else
 		{
 			
 			list.insert(word);
 			String newString[] = list.convertToStringArray(length);
-			String finalString = " ";
+			finalString = " ";
 			for(int i = 0;i<newString.length;i++)
 			{
 				finalString = finalString + newString[i];
 			}
-			FileWriter fr = new FileWriter(file, true);
-			BufferedWriter brw = new BufferedWriter(fr);
-			brw.write(finalString);
-			brw.close();
-			fr.close();
+			
 		}
 		
+		finalString = finalString.trim();
+		
+		brw.write(finalString);
+		brw.flush();
+		brw.close();
+		fr.close();
 		list.displayNodes();
 		list.countNodes();
 		

@@ -62,6 +62,72 @@ public class LinkedListD
 		}	
 	}
 	
+	public void addAtLast(int data)
+	{
+		Node2 newNode = new Node2();
+		newNode.data = data;
+		
+		if(head == null)
+		{
+			head = newNode;
+		}
+		else
+		{
+			Node2 tempNode = head;
+			while(tempNode.next!=null)
+			{
+				tempNode = tempNode.next;
+			}
+			
+			tempNode.next = newNode;
+			newNode.prev = tempNode;
+			
+		}
+		
+	}
+	
+	public void addFirst(int data)
+	{
+		Node2 newNode = new Node2();
+		newNode.data = data;
+		
+		if(head == null)
+		{
+			head = newNode;
+		}
+		else
+		{
+			newNode.next = head;
+			head.prev = newNode;
+			head = newNode;
+		}
+	}
+	
+	public void addAtPosition(int data, int position)
+	{
+		Node2 newNode= new Node2();
+		newNode.data = data;
+		if(head == null)
+		{
+			head = newNode;
+		}
+		else
+		{
+			int count = 1;
+			Node2 tempNode = head;
+			while(count<=position)
+			{
+				tempNode = tempNode.next;
+				count++;
+			}
+			tempNode.prev.next = newNode;
+			newNode.prev = tempNode.prev;
+			tempNode.prev = newNode;
+			newNode.next = tempNode;
+		}
+		
+	}
+	
 	public void display()
 	{
 		Node2 node = new Node2();
@@ -74,5 +140,7 @@ public class LinkedListD
 		}
 		
 	}
+	
+	
 	
 }
