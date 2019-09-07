@@ -2,14 +2,14 @@ package com.bridgelabz.utility;
 
 
 
-public class StackUtility <T>
+public class Stack<T>
 {
 	Node <T> head;
 	
-	public  void push(Object item)
+	public  void push(T expressionArray)
 	{
 		Node<T> newNode = new Node<T>();
-		newNode.data =  item;
+		newNode.data =  expressionArray;
 		
 		if(head == null)
 		{
@@ -80,6 +80,29 @@ public class StackUtility <T>
 		while(tempNode!=null)
 		{
 			System.out.print(tempNode.data+" ");
+			tempNode = tempNode.next;
+		}
+		System.out.println(" ");
+	}
+
+	public void viewStackAnagram() 
+	{
+		Node <T> tempNode = new Node<T>();
+		tempNode = head;
+		int iCnt = 0;
+		while(tempNode!=null)
+		{
+			if(iCnt<2)
+			{
+				System.out.println(tempNode.data+" ");
+				iCnt++;
+			}
+			else
+			{
+				System.out.println();
+				iCnt = 0;
+			}
+			
 			tempNode = tempNode.next;
 		}
 		System.out.println(" ");

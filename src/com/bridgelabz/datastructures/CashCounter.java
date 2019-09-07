@@ -1,14 +1,14 @@
 package com.bridgelabz.datastructures;
 
-import com.bridgelabz.utility.QueueUtility;
+import com.bridgelabz.utility.Queue;
 import com.bridgelabz.utility.Utility;
 
 public class CashCounter {
 
-	public static <T> void main(String[] args) 
+	public static <I> void main(String[] args) 
 	{
 		int cashAvailable = 50000;
-		QueueUtility <T> cashCounterQueue = new QueueUtility<T>();
+		Queue <Integer> cashCounterQueue = new Queue();
 		cashCounterQueue.enqueue(1);
 		cashCounterQueue.enqueue(2);
 		cashCounterQueue.enqueue(3);

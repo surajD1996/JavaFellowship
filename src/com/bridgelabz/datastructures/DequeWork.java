@@ -1,12 +1,12 @@
 package com.bridgelabz.datastructures;
 
-import com.bridgelabz.utility.DequeUtility;
+import com.bridgelabz.utility.Deque;
 
 public class DequeWork 
 {
 	public static <T> void main(String[] args) 
 	{
-		DequeUtility <T> deque = new DequeUtility<T>();
+		Deque <Integer> deque = new Deque();
 		System.out.println("Deque length "+deque.size);
 		
 		deque.addFront(13);

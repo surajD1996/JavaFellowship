@@ -8,10 +8,10 @@ public class LinkedListX <T>
 	 * purpose 		inserts element at first position
 	 * @param data	data to be inserted in linked list
 	 */
-	public void insertAtFirst(Object data)
+	public void insertAtFirst(T data)
 	{
 		Node <T> node = new Node<T>();
-		node.data = (T) data;
+		node.data =  data;
 		if(head == null)
 		{
 			head = node;
@@ -28,10 +28,10 @@ public class LinkedListX <T>
 	 * purpose 		inserts the element at last position
 	 * @param data	data to be inserted in linked list
 	 */
-	public void insertLast(Object data)
+	public void insertLast(T data)
 	{
 		Node <T> node = new Node<T>();
-		node.data = (T) data;
+		node.data =  data;
 		
 		if(head == null)
 		{
@@ -56,11 +56,11 @@ public class LinkedListX <T>
 	 * purpose 	insert element in the linked list at the end
 	 * @param 	string	data of the node	
 	 */
-	public  void insert(Object string)
+	public  void insert(T string)
 	{
 		
-		Node<T> node = new<T> Node();
-		node.data = (T) string;
+		Node<T> node = new Node<T>();
+		node.data = string;
 		node.next = null;
 		
 		if(head==null)
@@ -80,7 +80,7 @@ public class LinkedListX <T>
 			n.next = node;
 			
 		}
-		
+		System.out.println("hello"+head.data);
 	}
 	
 	/**
@@ -115,6 +115,19 @@ public class LinkedListX <T>
 		}
 		System.out.println(" ");
 	}
+	
+	public void displayListNodes()
+	{
+		Node<T> node = new Node<T>();
+		node = head;
+		while(node.next!=null)
+		{
+			System.out.println(" Id = ");
+		}
+	}
+	
+	
+	
 	
 	/**
 	 * Purpose 	search the element in the linked list
@@ -178,6 +191,8 @@ public class LinkedListX <T>
 	public void deletAtPosition(int position) 
 	{
 		int count = 1;
+		//jaged array
+		//int arr[][]= new int[2][];
 		Node <T> node = new Node<T>();
 		Node <T> node2 = new Node<T>();
 		node = head;

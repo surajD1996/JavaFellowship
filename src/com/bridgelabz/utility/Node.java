@@ -2,7 +2,7 @@ package com.bridgelabz.utility;
 
 public class Node <T>{
 
-	public Object data;
+	public T data;
 	public Node<T> next;
 	public Node()
 	{

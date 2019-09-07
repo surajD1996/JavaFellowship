@@ -7,7 +7,7 @@ public class ReverceList
 
 	public static <T>void main(String[] args) 
 	{
-		LinkedListX <T>list = new LinkedListX<T>();
+		LinkedListX <Integer>list = new LinkedListX();
 		list.insert(10);
 		list.insert(20);
 		list.insert(30);

@@ -1,6 +1,6 @@
 package com.bridgelabz.datastructures;
 
-import com.bridgelabz.utility.DequeUtility;
+import com.bridgelabz.utility.Deque;
 import com.bridgelabz.utility.Utility;
 
 public class PallindromeChecker 
@@ -8,7 +8,7 @@ public class PallindromeChecker
 
 	public static <T> void main(String[] args) 
 	{
-		DequeUtility <T> pallindromeCheck = new DequeUtility<T>();
+		Deque <Character> pallindromeCheck = new Deque();
 		System.out.println("Enter The String to check");
 		String inputString = Utility.scanString();
 		for(int i = 0;i<inputString.length();i++)

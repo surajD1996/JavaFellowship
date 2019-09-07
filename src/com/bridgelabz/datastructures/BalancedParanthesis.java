@@ -1,13 +1,13 @@
 package com.bridgelabz.datastructures;
 
-import com.bridgelabz.utility.StackUtility;
+import com.bridgelabz.utility.Stack;
 import com.bridgelabz.utility.Utility;
 
 public class BalancedParanthesis 
 {
 	public static <T> void main(String[] args) 
 	{
-		StackUtility <T> stack = new  StackUtility<T>();
+		Stack <Character> stack = new  Stack();
 		System.out.println("Enter The Expression");
 		String expression = new String();
 		expression = Utility.scanString();
@@ -17,13 +17,13 @@ public class BalancedParanthesis
 		
 		for(int i = 0; i<expressionArray.length; i++)
 		{
-			if(expressionArray[i]=='(')
+			if((expressionArray[i]=='(')||(expressionArray[i]=='{')||(expressionArray[i]=='['))
 			{
 				top++;
 				stack.push(expressionArray[i]);
 			}
 			
-			else if(expressionArray[i]==')')
+			else if((expressionArray[i]==')')||(expressionArray[i]=='}')||(expressionArray[i]==']'))
 			{
 				if(top==0)
 				{
@@ -31,10 +31,10 @@ public class BalancedParanthesis
 					break;
 				}
 				stack.pop();
-					
+				top--;
 			}
 		}
-		if(!(stack.isEmpty())&&(top==0))
+		if((stack.isEmpty())&&(top==0))
 		{
 			System.out.println("Expression has balanced paranthesis");
 		}

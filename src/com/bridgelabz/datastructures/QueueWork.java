@@ -1,12 +1,12 @@
 package com.bridgelabz.datastructures;
 
-import com.bridgelabz.utility.QueueUtility;
+import com.bridgelabz.utility.Queue;
 
 public class QueueWork {
 
 	public static <T> void main(String[] args) {
 		
-		QueueUtility <T> queue = new QueueUtility<T>(); 
+		Queue <Integer> queue = new Queue(); 
 		queue.enqueue(10);
 		queue.enqueue(20);
 		queue.enqueue(30);

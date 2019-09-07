@@ -6,7 +6,7 @@ public class LinkedListMain <T>
 {
 	public static <T>void main(String[] args) 
 	{
-		LinkedListX <T> list = new LinkedListX<T>();
+		LinkedListX <Integer> list = new LinkedListX();
 		list.insert(5);
 		list.insert(15);
 		list.insert(25);

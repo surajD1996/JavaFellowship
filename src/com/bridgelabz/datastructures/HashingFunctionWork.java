@@ -1,6 +1,6 @@
 package com.bridgelabz.datastructures;
 
-import com.bridgelabz.utility.HashingUtility;
+import com.bridgelabz.utility.Hashing;
 import com.bridgelabz.utility.Node;
 import com.bridgelabz.utility.Utility;
 
@@ -11,7 +11,7 @@ public class HashingFunctionWork
 	{
 		
 		Node arr[] = new Node[11];
-		HashingUtility hashMap = new HashingUtility();
+		Hashing hashMap = new Hashing();
 		//System.out.println("Hello");
 //		arr[0] = hl.insertAtFirst(10, arr[0]);
 //		

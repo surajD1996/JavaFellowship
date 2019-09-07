@@ -880,4 +880,328 @@ public class Utility
 		}
 	}
 	
+	public static boolean checkAnagram(int iValue)
+	{
+		if(iValue<=10)
+		{
+			return false;
+		}
+		else
+		{
+			int tempValue = iValue;
+			int digit = 0, reverse = 0;
+			while(iValue>0)
+			{
+				digit = iValue%10;
+				iValue = iValue/10;
+				reverse = reverse * 10 + digit;
+			}
+			if(reverse == tempValue)
+			{
+				return true;
+			}
+			else
+			{
+				return false;
+			}
+		}
+	}
+
+	public static int[][] primeRangeX(int lowerLimit, int upperLimit) 
+	{
+		int primeArray[][] = new int[10][30];
+		int one = 0, two = 0, three = 0, four = 0, five = 0, six = 0, seven = 0;
+		int eight = 0, nine = 0,ten = 0;
+		for(int i = lowerLimit;i<upperLimit;i++)
+		{
+			boolean status = Utility.checkPrime(i);
+			
+			if(status==true)
+			{
+				if((i>0)&&(i<=100))
+				{
+					primeArray[0][one]=i;
+					one++;
+				}
+				else if((i>100)&&(i<=200))
+				{
+					primeArray[1][two]=i;
+					two++;
+				}
+				else if((i>200)&&(i<=300))
+				{
+					primeArray[2][three]=i;
+					three++;
+				}
+				else if((i>300)&&(i<=400))
+				{
+					primeArray[3][four]=i;
+					four++;
+				}
+				else if((i>400)&&(i<=500))
+				{
+					primeArray[4][five]=i;
+					five++;
+				}
+				else if((i>500)&&(i<=600))
+				{
+					primeArray[5][six]=i;
+					six++;
+				}
+				else if((i>600)&&(i<=700))
+				{
+					primeArray[6][seven]=i;
+					seven++;
+				}
+				else if((i>600)&&(i<=800))
+				{
+					primeArray[7][eight]=i;
+					eight++;
+				}
+				else if((i>800)&&(i<=900))
+				{
+					primeArray[8][nine]=i;
+					nine++;
+				}
+				else if((i>900)&&(i<=1000))
+				{
+					primeArray[9][ten]=i;
+					ten++;
+				}
+			}
+		}
+		
+		return primeArray;
+	}
+	
+	public static void anagramRange()
+	{
+		int y = 0;
+
+		int[] arr = new int[170];
+
+		for (int i = 1; i <= 1000; i++) 
+		{
+			boolean flag = true;
+
+			for (int j = 2; j < i - 1; j++) {
+				
+				if (i % j == 0) 
+				{
+					flag = false;
+					break;
+				}
+			}
+			if (flag == true) {
+				arr[y] = i;
+				y++;
+			}
+			
+		}
+		
+	
+		int[] a= new int[170];
+		
+		for(int i=0;i<arr.length;i++)
+		{
+			a[i]=arr[i];
+		}
+		
+//		int arr[][] = Utility.primeRangeX(2, 1000);
+		
+//		for(int i=0;i<arr.length;i++)
+//		{
+//			System.out.print(a[i]);
+//		}
+		
+		//String[] array= new String[arr.length];
+		
+		StringBuffer sb= new StringBuffer(arr.length);
+		
+		String s=" ";
+		
+		for(int i=0;i<arr.length;i++)
+		{
+			s=sb.append(a[i]+" ").toString();
+		}
+		
+		String[] str=s.split(" ");
+		
+		String arr1[][] = new String[10][30];
+		boolean flag=true;
+		String[][] s1=new String[arr.length][arr.length];
+		//String[][] s2=new String[1000-arr.length][1000-arr.length];
+		
+		for(int k=0;k<str.length-1;k++)
+		{
+			for(int l=k+1;l<str.length;l++)
+			{
+				flag=Utility.anagramDetection(str[k], str[l]);
+			
+			
+				if(flag==true)
+				{
+					s1[k][l]=str[k]+" "+str[l];
+					System.out.println(s1[k][l]);
+					
+				}
+			
+			}
+		}
+		
+		
+	}
+	
+	public static Stack anagramToStack()
+	{
+		Stack stack = new Stack();
+		String arr1[][] = new String[10][30];
+		int y = 0;
+
+		int[] arr = new int[170];
+
+		for (int i = 1; i <= 1000; i++) {
+			boolean flag = true;
+
+			for (int j = 2; j < i - 1; j++) {
+				
+				if (i % j == 0) 
+				{
+					flag = false;
+					break;
+				}
+			}
+			if (flag == true) {
+				arr[y] = i;
+				y++;
+			}
+			
+		}
+		
+	
+		int[] a= new int[170];
+		
+		for(int i=0;i<arr.length;i++)
+		{
+			a[i]=arr[i];
+		}
+		
+
+		
+		StringBuffer sb= new StringBuffer(arr.length);
+		
+		String s=" ";
+		
+		for(int i=0;i<arr.length;i++)
+		{
+			s=sb.append(a[i]+" ").toString();
+		}
+		
+		String[] str=s.split(" ");
+		
+		
+		boolean flag=true;
+		String[][] s1=new String[arr.length][arr.length];
+		//String[][] s2=new String[1000-arr.length][1000-arr.length];
+		
+		for(int k = 0;k<str.length-1;k++)
+		{
+			for(int l=k+1;l<str.length;l++)
+			{
+				flag=Utility.anagramDetection(str[k], str[l]);
+			
+			
+				if(flag==true)
+				{
+					s1[k][l]=str[k]+" "+str[l];
+					//System.out.println(s1[k][l]);
+					stack.push(s1[k][l]);	
+				}
+			
+			}
+		}
+		
+
+		return stack;
+		//stack.viewStack();
+		
+		
+	}
+	
+	public static Queue anagramToQueue()
+	{
+		Queue queue = new Queue();
+		String arr1[][] = new String[10][30];
+		int y = 0;
+
+		int[] arr = new int[170];
+
+		for (int i = 1; i <= 1000; i++) {
+			boolean flag = true;
+
+			for (int j = 2; j < i - 1; j++) {
+				
+				if (i % j == 0) 
+				{
+					flag = false;
+					break;
+				}
+			}
+			if (flag == true) {
+				arr[y] = i;
+				y++;
+			}
+			
+		}
+		
+	
+		int[] a= new int[170];
+		
+		for(int i=0;i<arr.length;i++)
+		{
+			a[i]=arr[i];
+		}
+		
+
+		
+		StringBuffer sb= new StringBuffer(arr.length);
+		
+		String s=" ";
+		
+		for(int i=0;i<arr.length;i++)
+		{
+			s=sb.append(a[i]+" ").toString();
+		}
+		
+		String[] str=s.split(" ");
+		
+		
+		boolean flag=true;
+		String[][] s1=new String[arr.length][arr.length];
+		//String[][] s2=new String[1000-arr.length][1000-arr.length];
+		
+		for(int k = 0;k<str.length-1;k++)
+		{
+			for(int l=k+1;l<str.length;l++)
+			{
+				flag=Utility.anagramDetection(str[k], str[l]);
+			
+			
+				if(flag==true)
+				{
+					s1[k][l]=str[k]+" "+str[l];
+					//System.out.println(s1[k][l]);
+					queue.enqueue(s1[k][l]);	
+				}
+			
+			}
+		}
+		
+
+		return queue;
+		//stack.viewStack();
+	}
+	
+	
+	
 }

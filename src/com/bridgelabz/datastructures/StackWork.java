@@ -1,12 +1,12 @@
 package com.bridgelabz.datastructures;
 
-import com.bridgelabz.utility.StackUtility;
+import com.bridgelabz.utility.Stack;
 
 public class StackWork {
 
 	public static <T> void main(String[] args) 
 	{
-		StackUtility <T> stack = new  StackUtility<T>();
+		Stack <String> stack = new  Stack();
 		stack.push("Vaibhav");
 		stack.push("Ganesh");
 		stack.push("suraj");

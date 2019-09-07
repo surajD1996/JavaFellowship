@@ -5,11 +5,11 @@ public class LinkedListXX <T>
 	public Node  <T>head;
 	public void orderedList()
 	{
-		head.data = 0;
+		head.data = null;
 		head.next = null;
 	}
 	
-	public void add(int item)
+	public void add(T item)
 	{
 		int count = 1;
 		Node  <T>newNode = new Node <T>();

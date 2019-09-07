@@ -1,12 +1,12 @@
 package com.bridgelabz.utility;
 
-public class DequeUtility <T>
+public class Deque <T>
 {
 	Node <T> front;
 	Node <T> rear;
 	public int size=0;
 	
-	public void addFront(Object data)
+	public void addFront(T data)
 	{
 		size++;
 		Node <T> newNode = new Node<T>();
@@ -23,7 +23,7 @@ public class DequeUtility <T>
 		
 	}
 	
-	public void addRear(Object data)
+	public void addRear(T data)
 	{
 		size++;
 		Node <T> newNode = new Node<T>();

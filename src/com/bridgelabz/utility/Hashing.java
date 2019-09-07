@@ -1,6 +1,6 @@
 package com.bridgelabz.utility;
 
-public class HashingUtility 
+public class Hashing 
 {
 	Node head;
 	public Node insertAtFirst(Object data, Node hashHead)

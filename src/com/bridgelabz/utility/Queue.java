@@ -1,12 +1,12 @@
 package com.bridgelabz.utility;
 
-public class QueueUtility<T> 
+public class Queue<T> 
 {
 	Node <T> front;
 	Node <T> rear;
 	public int size=0;
 	
-	public void enqueue(Object item)
+	public void enqueue(T item)
 	{
 		Node<T> newNode = new Node<T>();
 		newNode.data =  item;
@@ -65,6 +65,36 @@ public class QueueUtility<T>
 		
 	}
 	
+	public void viewAnagramQueue()
+	{
+		Node<T> tempNode = new Node<T>();
+		tempNode = front;
+		int iCnt = 0;
+		if(front==null)
+		{
+			System.out.println("Queue is Empty");
+		}
+		else
+		{
+			
+			System.out.print("Queue = ");
+			while(tempNode!=null)
+			{
+				if(iCnt < 2)
+				{
+					System.out.println("  "+tempNode.data);
+				}
+				else
+				{
+					System.out.println("  "+tempNode.data);
+				}
+				
+				tempNode = tempNode.next;
+			}
+			System.out.println("");
+		}
+	}
+	
 	public boolean isEmpty()
 	{
 		if(front==null)
@@ -76,4 +106,7 @@ public class QueueUtility<T>
 			return false;
 		}
 	}
+	
+	
+	
 }

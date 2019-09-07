@@ -7,7 +7,7 @@ public class Work2 <T>
 {
 	Node <T> head;
 	public int size;
-	public void add(Object arr)
+	public void add(T arr)
 	{
 		size++;
 		Node <T>newNode = new Node<T>();
@@ -32,7 +32,7 @@ public class Work2 <T>
 	{
 		Node <T>current=head;
 		Node <T>index=null;
-		int temp;
+		T temp;
 	
 		if(head==null)
 		{
@@ -50,7 +50,7 @@ public class Work2 <T>
 					//Used bubble sort 
 					if((int)current.data > (int)index.data)
 					{  
-						temp = (int) current.data;  
+						temp = current.data;  
 					    current.data = index.data;  
 					    index.data = temp;  
 					}

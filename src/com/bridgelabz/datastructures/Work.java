@@ -14,10 +14,11 @@ public class Work <T>
 
 	public static <T>void main(String[] args) throws Exception 
 	{
-		LinkedListX <T> list = new LinkedListX<T>();
+		LinkedListX <String> list = new LinkedListX();
 		File file = new File("/home/user/abc.txt");
 		BufferedReader br = new BufferedReader(new FileReader(file));
 		String str = br.readLine();
+		
 		
 		String strArray[] = str.split(" ");
 		
