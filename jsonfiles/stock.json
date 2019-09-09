@@ -1,0 +1,8 @@
+{
+	"Stocks":
+	[
+		{"Stock_Name":"ABC", "Shares": 10, "Share_Price":50},
+		{"Stock_Name":"PQR", "Shares": 20, "Share_Price":100},
+		{"Stock_Name":"XYZ", "Shares": 30, "Share_Price":200}
+	]
+}

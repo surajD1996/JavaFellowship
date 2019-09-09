@@ -2,8 +2,8 @@ package com.bridgelabz.utility;
 
 public class Queue<T> 
 {
-	Node <T> front;
-	Node <T> rear;
+	public Node <T> front;
+	public Node <T> rear;
 	public int size=0;
 	
 	public void enqueue(T item)

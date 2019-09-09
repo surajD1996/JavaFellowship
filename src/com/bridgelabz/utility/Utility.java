@@ -1196,12 +1196,42 @@ public class Utility
 			
 			}
 		}
-		
-
 		return queue;
 		//stack.viewStack();
 	}
 	
+	public static String[] shuffelCards(String cards[])
+	{
+		Random random = new Random();
+		for(int i = 0; i<cards.length; i++)
+		{
+			int position = random.nextInt(cards.length);
+//			System.out.print(position+" ");
+//			System.out.print(cards[position]+" ");
+			if(i != position)
+			{
+				String temp = cards[i];
+				cards[i] = cards[position];
+				cards[position] = temp;
+			}
+			
+		}
+		System.out.println();
+		return cards;
+	}
 	
-	
+	public static String[] shuffleTheCards(String[] Cat) 
+	{
+		Random random = new Random();
+		for(int i=0; i<Cat.length-1; i++)
+		{
+			int value = random.nextInt(Cat.length);
+			String temp = Cat[i];
+			Cat[i] = Cat[value];
+			Cat[value] = temp;
+			//System.out.println(value);
+		}
+		return Cat;
+	}
+
 }
