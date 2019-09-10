@@ -10,19 +10,19 @@ import com.bridgelabz.utility.Utility;
 
 public class RegularExpression 
 {
-	private String firstName;
-	private String lastName;
-	private String fullName;
-	private String strDate;
-	private String mobileNumber;
+	private static String firstName;
+	private static String lastName;
+	private static String fullName;
+	private static String strDate;
+	private static String mobileNumber;
 	
 	
-	public String getFirstName() 
+	public static String getFirstName() 
 	{
 		return firstName;
 	}
 	
-	public void setFirstName() 
+	public static void setFirstName() 
 	{
 		System.out.println("Enter Your First Name ");
 		String tempString = Utility.scanString();
@@ -37,12 +37,12 @@ public class RegularExpression
 		}
 	}
 	
-	public String getLastName() 
+	public static String getLastName() 
 	{
 		return lastName;
 	}
 	
-	public void setLastName() 
+	public static void setLastName() 
 	{
 		System.out.println("Enter Your Last Name ");
 		String tempString = Utility.scanString();
@@ -57,34 +57,34 @@ public class RegularExpression
 		}
 	}
 	
-	public String getFullName() 
+	public static String getFullName() 
 	{
 		return fullName;
 	}
 	
-	public void setFullName() 
+	public static void setFullName() 
 	{
-		this.fullName = firstName+" "+lastName;
+		fullName = firstName+" "+lastName;
 	}
 	
-	public String getDate() 
+	public static String getDate() 
 	{
 		return strDate;
 	}
 	
-	public void setDate() 
+	public static void setDate() 
 	{
 		Date date = new Date();  
 	    SimpleDateFormat formatter = new SimpleDateFormat("dd/MM/yyyy");  
 	    strDate= formatter.format(date); 
 	}
 	
-	public String getMobileNumber() 
+	public static String getMobileNumber() 
 	{
 		return mobileNumber;
 	}
 	
-	public void setMobileNumber() 
+	public static void setMobileNumber() 
 	{
 		
 		System.out.println("Enter Your Contact Number ");
@@ -97,7 +97,7 @@ public class RegularExpression
 		else
 		{	
 			System.out.println("Enter Valid Input");
-			System.exit(0);
+			
 		}
 		
 	}

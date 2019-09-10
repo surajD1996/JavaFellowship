@@ -2,7 +2,7 @@ package com.bridgelabz.objectorientation;
 
 import java.io.Serializable;
 
-public class InventryWork implements Serializable
+public class InventryWork 
 {
 	private String name;
 	private int price;

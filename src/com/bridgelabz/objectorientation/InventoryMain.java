@@ -10,12 +10,11 @@ import org.codehaus.jackson.map.ObjectMapper;
 
 import com.bridgelabz.utility.Utility;
 
-public class InventoryMain 
+public class InventoryMain extends OOPSUtility
 {
 
 	public static void main(String[] args) 
 	{
-		
 		//	JSON File
 		String jsonFile ="/home/user/Suraj/Week1/JavaFellowship/jsonfiles/RiceWheat.json";
 		ObjectMapper mapper = new ObjectMapper();	

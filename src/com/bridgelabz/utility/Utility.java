@@ -8,9 +8,13 @@
 
 
 package com.bridgelabz.utility;
+import java.io.File;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
+
+import org.codehaus.jackson.map.ObjectMapper;
 public class Utility 
 {
 	static Scanner scanner = new Scanner(System.in);
@@ -1220,6 +1224,11 @@ public class Utility
 		return cards;
 	}
 	
+	/**
+	 * purpose 		shuffles the cards 
+	 * @param Cat	unshuffled deck of cards
+	 * @return		
+	 */
 	public static String[] shuffleTheCards(String[] Cat) 
 	{
 		Random random = new Random();
@@ -1233,5 +1242,24 @@ public class Utility
 		}
 		return Cat;
 	}
-
+	
+	/**
+	 * purpose 			converts java object to json
+	 * @param list		linked list of data members
+	 * @param fileName	json file from where we need to access data
+	 */
+	public static void writeObjectToJson(List list, String fileName)
+	{
+		Object[] arr = list.toArray();
+	
+		ObjectMapper mapper = new ObjectMapper();
+		try
+		{
+			mapper.writeValue(new File(fileName), arr);
+		}
+		catch(Exception e) 
+		{
+			e.printStackTrace();
+		}
+	}
 }

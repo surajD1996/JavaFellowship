@@ -20,5 +20,4 @@ public class InventryDataManagement
 		System.out.println(info.getPrice());
 		System.out.println(info.getWeight());
 	}
-
 }
