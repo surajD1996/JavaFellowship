@@ -16,44 +16,7 @@ public class JSONWorkMain
 
 	public static void main(String[] args) throws IOException 
 	{
-//		System.out.println("Enter The Number Of Employees");
-//		int numberOfEmployees = Utility.scanInt();
-//		JSONWork emp[] = new JSONWork[numberOfEmployees];
-		
-//		for(int i = 0; i<emp.length ; i++)
-//		{
-//			emp[i].setEmpNumber(10);
-//			emp[i].setName("ABC");
-//			emp[i].setSalary(5000);
-//		}
-		
-//		Scanner scanValues = new Scanner(System.in);
-//				
-//		
-//		
-//		LinkedListX <JSONWork> list = new LinkedListX();
-//		System.out.println("Enter The Number Of Employees");
-//		int empCount = Utility.scanInt();
-//		
-//		for(int i = 0; i<empCount; i++)
-//		{
-//			JSONWork emp = new JSONWork();
-//			System.out.println("Enter ID ");
-//			int empID = Utility.scanInt();
-//			
-//			emp.setEmpNumber(empID);
-//			System.out.println("Enter Name ");
-//			String empName = scanValues.nextLine();
-//			
-//			emp.setName(empName);
-//			System.out.println("Enter Salary ");
-//			double empSal = Utility.scanDouble();
-//			
-//			emp.setSalary(empSal);
-//			list.insert(emp);
-//		}
-//		
-//		list.displayListNodes();
+
 		
 		JSONWork emp1 = new JSONWork();
 		emp1.setEmpNumber(101);
@@ -70,26 +33,14 @@ public class JSONWorkMain
 		
 		String JSONEmp1 = JSONUtil.convertJavaToJSON(emp2);
 		System.out.println(JSONEmp1);
-		
-		File jsonFile = new File("/home/user/Suraj/Week1/JavaFellowship/jsonfiles/employee.json"); 
-		//FileReader readFile = new FileReader(jsonFile);
-		
-		FileWriter fw = new FileWriter(jsonFile,true);
-		
-//		Scanner readFile = new Scanner(jsonFile);
+				
+//		JSONWork emp = JSONUtil.convertJsonToJava(JSONEmp, JSONWork.class);
+//		System.out.println(emp.getEmpNumber()+"  "+emp.getName()+"  "+emp.getSalary());
 //		
-//		String jsonData = readFile.nextLine();
-//		
-//		System.out.println(jsonData);
+//		JSONWork emp3 = JSONUtil.convertJsonToJava(JSONEmp1, JSONWork.class);
+//		System.out.println(emp3.getEmpNumber()+"  "+emp3.getName()+"  "+emp3.getSalary());
 		
-		fw.write(JSONEmp);
-		fw.flush();
 		
-		JSONWork emp = JSONUtil.convertJsonToJava(JSONEmp, JSONWork.class);
-		System.out.println(emp.getEmpNumber()+"  "+emp.getName()+"  "+emp.getSalary());
-		
-		JSONWork emp3 = JSONUtil.convertJsonToJava(JSONEmp1, JSONWork.class);
-		System.out.println(emp3.getEmpNumber()+"  "+emp3.getName()+"  "+emp3.getSalary());
 		
 	}
 }

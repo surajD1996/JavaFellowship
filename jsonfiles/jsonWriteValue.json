@@ -1,0 +1,7 @@
+{
+  "personName" : "Vaibhav",
+  "address" : {
+    "city" : "Mumbai",
+    "state" : "MH"
+  }
+}

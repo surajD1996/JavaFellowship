@@ -74,7 +74,6 @@ public class InventoryMain extends OOPSUtility
 					System.out.println("TOTAL PRICE = "+(price*weight));
 					System.out.println();
 					System.out.println("TOTAL "+item+" PRICE = "+total);
-					
 				}
 			}while (choice < 4 );
 		}
@@ -83,7 +82,6 @@ public class InventoryMain extends OOPSUtility
 		{
 			System.out.println("Error occured while Opening the file");
 		}
-		
 	}
 	
 }

@@ -2,11 +2,20 @@ package com.bridgelabz.objectorientation;
 
 import java.io.Serializable;
 
+import org.codehaus.jackson.annotate.JsonIgnore;
+import org.codehaus.jackson.annotate.JsonPropertyOrder;
+
 @SuppressWarnings("serial")
+@JsonPropertyOrder(value = {
+		"name",
+		"empNumber",
+		
+})
 public class JSONWork implements Serializable
 {
 	private int empNumber;
 	private String name;
+	@JsonIgnore
 	private double salary;
 	
 	public int getEmpNumber() 
@@ -38,6 +47,5 @@ public class JSONWork implements Serializable
 	{
 		this.salary = salary;
 	}
-	
 	
 }
