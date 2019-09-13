@@ -1,15 +1,10 @@
-package com.bridgelabz.jsonpractice;
+package com.bridgelabz.objectorientation.addressbook;
 
-public class Address 
+public class Address
 {
 	private String city;
 	private String state;
-	
-	public Address(String city, String state)
-	{
-		this.city = city;
-		this.state = state;
-	}
+	private int zipCode;
 	
 	public String getCity() 
 	{
@@ -30,4 +25,15 @@ public class Address
 	{
 		this.state = state;
 	}
+	
+	public int getZipCode() 
+	{
+		return zipCode;
+	}
+	
+	public void setZipCode(int zipCode) 
+	{
+		this.zipCode = zipCode;
+	}
+	
 }

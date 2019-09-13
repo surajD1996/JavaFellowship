@@ -5,6 +5,12 @@ public class Person
 	private String personName;
 	private Address address;
 	
+	public Person()
+	{
+		this.personName = null;
+		this.address = null;
+	}
+	
 	public Person(String personName, Address address)
 	{
 		this.personName = personName;
@@ -29,6 +35,5 @@ public class Person
 	public void setAddress(Address address) 
 	{
 		this.address = address;
-	}
-		
+	}		
 }

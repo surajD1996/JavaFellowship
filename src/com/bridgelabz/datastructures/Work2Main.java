@@ -24,16 +24,16 @@ public class Work2Main
 //		String s = "45";
 //		int n = Integer.parseInt(s);
 //		System.out.println(n);
-//		ol.add(12);
-//		ol.add(45);
-//		ol.add(89);
-//		ol.add(39);
-//		ol.add(93);
-//		ol.add(35);
-//		ol.add(15);
-//		ol.add(68);
-//		ol.add(48);
-//		ol.add(78);
+		ol.add(12);
+		ol.add(45);
+		ol.add(89);
+		ol.add(39);
+		ol.add(93);
+		ol.add(35);
+		ol.add(15);
+		ol.add(68);
+		ol.add(48);
+		ol.add(78);
 		ol.display();
 		System.out.println(ol.size);
 		

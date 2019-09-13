@@ -1,7 +1,12 @@
 {
-  "personName" : "Vaibhav",
+  "person" : {
+    "firstName" : "Vaibhav",
+    "lastName" : "Khadake",
+    "contactNumber" : 989898987
+  },
   "address" : {
-    "city" : "Mumbai",
-    "state" : "MH"
+    "city" : "Kolhapur",
+    "state" : "Maharashtra",
+    "zipCode" : 416213
   }
 }
