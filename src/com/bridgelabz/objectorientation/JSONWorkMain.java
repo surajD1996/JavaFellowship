@@ -33,12 +33,12 @@ public class JSONWorkMain
 		
 		String JSONEmp1 = JSONUtil.convertJavaToJSON(emp2);
 		System.out.println(JSONEmp1);
-				
+		System.out.println("Mark");
 		JSONWork emp = JSONUtil.convertJsonToJava(JSONEmp, JSONWork.class);
-//		System.out.println(emp.getEmpNumber()+"  "+emp.getName()+"  "+emp.getSalary());
-//		
-//		JSONWork emp3 = JSONUtil.convertJsonToJava(JSONEmp1, JSONWork.class);
-//		System.out.println(emp3.getEmpNumber()+"  "+emp3.getName()+"  "+emp3.getSalary());
+		System.out.println(emp.getEmpNumber()+"  "+emp.getName()+"  "+emp.getSalary());
+		
+		JSONWork emp3 = JSONUtil.convertJsonToJava(JSONEmp1, JSONWork.class);
+		System.out.println(emp3.getEmpNumber()+"  "+emp3.getName()+"  "+emp3.getSalary());
 		
 		
 		

@@ -48,7 +48,7 @@ public class Utility
 	 */
 	public static String scanString()
 	{
-		String inputString = scanner.nextLine();
+		String inputString = scanner.next();
 		return inputString;
 	}
 	
@@ -1262,4 +1262,9 @@ public class Utility
 			e.printStackTrace();
 		}
 	}
+
+	public static long scanLong() 
+	{
+		return scanner.nextLong();
+	}	
 }

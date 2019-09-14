@@ -1,100 +1,34 @@
 [ {
   "person" : {
-    "firstName" : "Vaibhav",
-    "lastName" : "Khadake",
-    "contactNumber" : 989898987
-  },
-  "address" : {
-    "city" : "Kolhapur",
-    "state" : "Maharashtra",
-    "zipCode" : 416213
+    "firstName" : "drfghdfg",
+    "lastName" : "adshfklas",
+    "contactNumber" : 78545478,
+    "address" : {
+      "city" : "dhasohldas",
+      "state" : "asdkjias",
+      "pinCode" : 125412
+    }
   }
 }, {
   "person" : {
-    "firstName" : "Vaibhav",
-    "lastName" : "Khadake",
-    "contactNumber" : 989898987
-  },
-  "address" : {
-    "city" : "Kolhapur",
-    "state" : "Maharashtra",
-    "zipCode" : 416213
+    "firstName" : "asdhiasjd",
+    "lastName" : "asdkjasd",
+    "contactNumber" : 7854,
+    "address" : {
+      "city" : "as",
+      "state" : "kjasd",
+      "pinCode" : 7854
+    }
   }
 }, {
   "person" : {
-    "firstName" : "Vaibhav",
-    "lastName" : "Khadake",
-    "contactNumber" : 989898987
-  },
-  "address" : {
-    "city" : "Kolhapur",
-    "state" : "Maharashtra",
-    "zipCode" : 416213
-  }
-}, {
-  "person" : {
-    "firstName" : "Vaibhav",
-    "lastName" : "Khadake",
-    "contactNumber" : 989898987
-  },
-  "address" : {
-    "city" : "Kolhapur",
-    "state" : "Maharashtra",
-    "zipCode" : 416213
-  }
-}, {
-  "person" : {
-    "firstName" : "Vaibhav",
-    "lastName" : "Khadake",
-    "contactNumber" : 989898987
-  },
-  "address" : {
-    "city" : "Kolhapur",
-    "state" : "Maharashtra",
-    "zipCode" : 416213
-  }
-}, {
-  "person" : {
-    "firstName" : "Vaibhav",
-    "lastName" : "Khadake",
-    "contactNumber" : 989898987
-  },
-  "address" : {
-    "city" : "Kolhapur",
-    "state" : "Maharashtra",
-    "zipCode" : 416213
-  }
-}, {
-  "person" : {
-    "firstName" : "Vaibhav",
-    "lastName" : "Khadake",
-    "contactNumber" : 989898987
-  },
-  "address" : {
-    "city" : "Kolhapur",
-    "state" : "Maharashtra",
-    "zipCode" : 416213
-  }
-}, {
-  "person" : {
-    "firstName" : "Vaibhav",
-    "lastName" : "Khadake",
-    "contactNumber" : 989898987
-  },
-  "address" : {
-    "city" : "Kolhapur",
-    "state" : "Maharashtra",
-    "zipCode" : 416213
-  }
-}, {
-  "person" : {
-    "firstName" : "Vaibhav",
-    "lastName" : "Khadake",
-    "contactNumber" : 989898987
-  },
-  "address" : {
-    "city" : "Kolhapur",
-    "state" : "Maharashtra",
-    "zipCode" : 416213
+    "firstName" : "gasdkas",
+    "lastName" : "kjasds",
+    "contactNumber" : 785478,
+    "address" : {
+      "city" : "askhad",
+      "state" : "askjd",
+      "pinCode" : 14
+    }
   }
 } ]

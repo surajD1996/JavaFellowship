@@ -14,7 +14,7 @@ public class Work <T>
 
 	public static <T>void main(String[] args) throws Exception 
 	{
-		LinkedListX <String> list = new LinkedListX();
+		LinkedListX <String> list = new LinkedListX<String>();
 		File file = new File("/home/user/abc.txt");
 		BufferedReader br = new BufferedReader(new FileReader(file));
 		String str = br.readLine();
