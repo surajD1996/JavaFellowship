@@ -2,6 +2,11 @@ package com.bridgelabz.addressbook;
 
 public class AddressBook 
 {
+	@Override
+	public String toString() {
+		return "AddressBook [person=" + person + "]";
+	}
+
 	Person person;
 		
 	public Person getPerson() 

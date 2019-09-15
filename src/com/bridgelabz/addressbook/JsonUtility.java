@@ -27,10 +27,10 @@ public class JsonUtility
 		System.out.println("Wrote Successfully");
 	}
 	
-	public static void prettyPrint(List<com.bridgelabz.addressbook.AddressBook> addressBookList) throws JsonGenerationException, JsonMappingException, IOException
+	public static void prettyPrint(List<com.bridgelabz.addressbook.AddressBook> addressBookList, String fileName) throws JsonGenerationException, JsonMappingException, IOException
 	{
 		ObjectWriter writer = mapper.writerWithDefaultPrettyPrinter();
-		writer.writeValue(new File("/home/user/Suraj/Week1/JavaFellowship/jsonfiles/addressBook.json"), addressBookList);
+		writer.writeValue(new File(fileName+".json"), addressBookList);
 	}
 	
 }

@@ -1,0 +1,23 @@
+[ {
+  "person" : {
+    "firstName" : "Suraj",
+    "lastName" : "asdad",
+    "contactNumber" : 8754785478,
+    "address" : {
+      "city" : "Pune",
+      "state" : "MH",
+      "pinCode" : 411052
+    }
+  }
+}, {
+  "person" : {
+    "firstName" : "ganesh",
+    "lastName" : "mule",
+    "contactNumber" : 5698541265,
+    "address" : {
+      "city" : "Sangli",
+      "state" : "MAHSRASHTRA",
+      "pinCode" : 541278
+    }
+  }
+} ]
