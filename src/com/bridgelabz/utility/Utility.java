@@ -752,6 +752,10 @@ public class Utility
 		
 	}
 
+	/**
+	 * @param inputString
+	 * @param word
+	 */
 	public static void binarySearchString(String inputString[], String word) 
 	{
 		inputString = sortString(inputString);
@@ -780,6 +784,10 @@ public class Utility
 		}
 	}
 	
+	/**
+	 * @param nums
+	 * @return
+	 */
 	public static int[] midElement(int[] nums) {
 	    int[] a;
 	    if (nums.length %2 == 0) {
@@ -795,6 +803,10 @@ public class Utility
 	    return a;
 	}
 
+	/**
+	 * @param cashAvailble
+	 * @return
+	 */
 	public static int deposit(int cashAvailble) 
 	{
 		System.out.println("Enter The Amount to Deposite");
@@ -803,6 +815,10 @@ public class Utility
 		return cashAvailble;
 	}
 
+	/**
+	 * @param cashAvailable
+	 * @return
+	 */
 	public static int withdraw(int cashAvailable) 
 	{
 		System.out.println("Enter The Amount to Withdraw");
@@ -815,6 +831,12 @@ public class Utility
 	static int[] month= { 31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
 	
 	
+	/**
+	 * Purpose 	
+	 * @param m
+	 * @param y
+	 * @return
+	 */
 	public static int  dayOfWeek(int m, int y)
 	{
 		int d = 1;
@@ -851,6 +873,10 @@ public class Utility
 		}
 	}
 	
+	/**
+	 * Purpose 	displays the calender
+	 * @param m	
+	 */
 	public static void display(int m)
 	{
 		System.out.println("\n \tSun	Mon	  Tus 	 Wed    Thir 	Fri   Sat ");
@@ -873,6 +899,10 @@ public class Utility
 		}
 	}
 	
+	/**
+	 * Purpose initializes the calender
+	 * 
+	 */
 	public static void init()
 	{
 		for(int i=0;i<calender.length;i++)
@@ -884,6 +914,11 @@ public class Utility
 		}
 	}
 	
+	/**
+	 * Purpose 	checks the input is anagram or not
+	 * @param iValue	
+	 * @return	returns true or false 
+	 */
 	public static boolean checkAnagram(int iValue)
 	{
 		if(iValue<=10)
@@ -911,6 +946,12 @@ public class Utility
 		}
 	}
 
+	/**
+	 * Purpose 	finds the numbers which are anagram in specified range
+	 * @param lowerLimit	lower limit from where we need to start prime numbers
+	 * @param upperLimit	upper limit till where we need to start prime numbers
+	 * @return
+	 */
 	public static int[][] primeRangeX(int lowerLimit, int upperLimit) 
 	{
 		int primeArray[][] = new int[10][30];
@@ -977,6 +1018,7 @@ public class Utility
 		
 		return primeArray;
 	}
+	
 	
 	public static void anagramRange()
 	{
@@ -1056,6 +1098,10 @@ public class Utility
 		
 	}
 	
+	/**
+	 * Purpose 	stores the numbers which are prime and further search for anagram and stores in STACK
+	 * @return 	returns the stack which contains anagram numbers 
+	 */
 	public static Stack anagramToStack()
 	{
 		Stack stack = new Stack();
@@ -1132,6 +1178,10 @@ public class Utility
 		
 	}
 	
+	/**
+	 * Purpose 	stores the numbers which are prime and further search for anagram and stores in queue
+	 * @return returns a queue of anagram numbers
+	 */
 	public static Queue anagramToQueue()
 	{
 		Queue queue = new Queue();
@@ -1263,6 +1313,10 @@ public class Utility
 		}
 	}
 
+	/**
+	 * purpose : scans variable of type long
+	 * @return returns the long variable
+	 */
 	public static long scanLong() 
 	{
 		return scanner.nextLong();

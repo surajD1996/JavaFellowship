@@ -23,8 +23,8 @@ public class AddressBookMain
 	public static void main(String[] args) throws IOException 
 	{
 		ObjectMapper objectMapper = new ObjectMapper();
-		List<Person> personArrayList = new ArrayList<>();
-		List<Address> AddressList = new ArrayList<>();
+//		List<Person> personArrayList = new ArrayList<>();
+//		List<Address> AddressList = new ArrayList<>();
 		List<AddressBook> addressBookList = new ArrayList<AddressBook>();
 		List<String> fileList = new ArrayList<String>();
 //		Person person = new Person();
@@ -97,7 +97,7 @@ public class AddressBookMain
 						address.setPinCode();
 						person.setAddress(address);
 						AddressBook addressBook = new AddressBook();
-						addressBook.setPerson(person);
+						// NOW   addressBook.setPerson(person);
 						addressBookList.add(addressBook);
 //						System.out.println(addressBookList);
 //						System.out.println(addressBookList.toString());
@@ -109,6 +109,7 @@ public class AddressBookMain
 						
 						List<AddressBook> personFileList = objectMapper.readValue(fileObject, new TypeReference<List<AddressBook>>() {});
 						addressBookList.addAll(personFileList);
+						
 						Person person = new Person();
 						person.setFirstName();
 						person.setLastName();
@@ -119,7 +120,7 @@ public class AddressBookMain
 						address.setPinCode();
 						person.setAddress(address);
 						AddressBook addressBook = new AddressBook();
-						addressBook.setPerson(person);
+					//NOw   	addressBook.setPerson(person);
 						addressBookList.add(addressBook);
 						JsonUtility.prettyPrint(addressBookList,fileName);
 						System.out.println(addressBookList.toString());

@@ -1,21 +1,25 @@
 package com.bridgelabz.addressbook;
 
+import com.bridgelabz.objectorientation.addressbook.PersonInformation;
+
 public class AddressBook 
 {
-	@Override
-	public String toString() {
-		return "AddressBook [person=" + person + "]";
-	}
+	
 
-	Person person;
+	PersonInformation personInformation;
 		
-	public Person getPerson() 
+	public PersonInformation getPerson() 
 	{
-		return person;
+		return personInformation;
 	}
 	
-	public void setPerson(Person person) 
+	public void setPerson(PersonInformation personInformation) 
 	{
-		this.person = person;
+		this.personInformation = personInformation;
+	}
+	
+	@Override
+	public String toString() {
+		return "AddressBook [person=" + personInformation + "]";
 	}
 }

@@ -1,73 +1,102 @@
 package com.bridgelabz.objectorientation.addressbook;
 
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
 import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.map.JsonMappingException;
+import org.codehaus.jackson.map.ObjectMapper;
 
-import com.bridgelabz.jsonpractice.JsonUtility;
+
+import com.bridgelabz.addressbook.AddressBook;
+
 import com.bridgelabz.utility.Utility;
 
-public class AddressBookMain {
+public class AddressBookMain
+{
 
 	public static void main(String[] args) throws JsonGenerationException, JsonMappingException, IOException 
 	{
-		List<AddressBook> persons = new ArrayList();
+		
+		ObjectMapper objectMapper = new ObjectMapper();
+		List<AddressBook> addressBookList = new ArrayList<AddressBook>(); 
 		int choice = 0;
-		do
+		//String jsonFile = null;
+		do 
 		{
-			Person person = new Person();
-			Address address = new Address();
-			AddressBook addressBook = new AddressBook();
-			System.out.println("Enter The Choice ");
-			System.out.print("1. Add New Record");
-			System.out.print("2. Delete Record");
-			System.out.print("3. Update Recort");
-			
+			System.out.println("1. Create New File ");
+			System.out.println("2. Open a File ");
+			System.out.println("3. Add Person Information  ");
+			System.out.println("4. Save File ");
+			System.out.println("5. Sort ");
+			System.out.println("6. Exit ");
+			System.out.println("Enter Your Choice : ");
 			choice = Utility.scanInt();
 			
 			switch(choice)
 			{
 				case 1:
-					
-					person.setFirstName("Vaibhav");
-					person.setContactNumber(989898987);
-					person.setLastName("Khadake");
-					address.setCity("Kolhapur");
-					address.setState("Maharashtra");
-					address.setZipCode(416213);
-					
-					addressBook.setPerson(person);
-					addressBook.setAddress(address);
-					
-					persons.add(addressBook);
-					
-					
-					JsonUtility.prettyPrint(persons);
+					System.out.println("Creating New File  ");
+					AddressBookOperations.createNewJsonFile();
 					break;
 					
-				case 2:
-					persons.remove(0);
+				case 2: 
+					
+					System.out.println("Enter The Name Of The File To Open");
+					
+				case 3:
+					
+					AddressBookOperations.addJsonFile(addressBookList, 	AddressBookOperations.openJsonFile());
+					System.out.println("Data Added To File Successfully");
+//					System.out.println(jsonFile);
+//					File fileObject = new File(jsonFile);
+//					
+//					if(fileObject.length() == 0)
+//					{
+//						PersonInformation personInformation = new PersonInformation();
+//						personInformation.setPersonInformation();
+//						System.out.println("You Entered ");
+//						System.out.println(personInformation.toString());
+//						AddressBook addressBook = new AddressBook();
+//						addressBook.setPerson(personInformation);
+//						addressBookList.add(addressBook);
+//						JsonUtility.prettyPrint(addressBookList, jsonFile);
+//					}
+//					
+//					else
+//					{
+//						List<AddressBook> oldAddressList = objectMapper.readValue(fileObject, new TypeReference<List<AddressBook>>() {});
+//						addressBookList.addAll(oldAddressList);
+//						PersonInformation personInformation = new PersonInformation();
+//						personInformation.setPersonInformation();
+//						System.out.println(addressBookList.get(0).getPerson().getFirstName());
+//						System.out.println("You Entered ");
+//						System.out.println(personInformation.toString());
+//						AddressBook addressBook = new AddressBook();
+//						addressBook.setPerson(personInformation);
+//						
+//						System.out.println(addressBook.getPerson().getFirstName());
+//						
+//						addressBookList.add(addressBook);
+//						
+//						JsonUtility.prettyPrint(addressBookList, jsonFile);
+//					}
 					break;
 					
-				default:
-					System.out.println("Enter Valid choice");
-					choice = 5;
+				case 4: 
+					System.out.println("Saving File ---->>>>");
+					AddressBookOperations.saveJsonFile(addressBookList,AddressBookOperations.openJsonFile());
+					System.out.println("Saved File Successfully");
 					
+				case 6:
+					System.out.println("Exiting....");
 				
-					
 			}
 			
-			
-		}while(choice != 5);
+		}while(choice!=6);
 		
-		
-		
-		
-		
-		//JsonUtility.writeToJsonFile(addressBook);
-		//JsonUtility.prettyPrint(addressBook);	
 	}
+
 }

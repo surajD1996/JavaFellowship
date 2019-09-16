@@ -9,7 +9,7 @@ import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 import org.codehaus.jackson.map.ObjectWriter;
 
-import com.bridgelabz.objectorientation.addressbook.AddressBook;
+
 
 public class JsonUtility 
 {
@@ -30,7 +30,9 @@ public class JsonUtility
 	public static void prettyPrint(List<com.bridgelabz.addressbook.AddressBook> addressBookList, String fileName) throws JsonGenerationException, JsonMappingException, IOException
 	{
 		ObjectWriter writer = mapper.writerWithDefaultPrettyPrinter();
-		writer.writeValue(new File(fileName+".json"), addressBookList);
+		writer.writeValue(new File("abc.json"), addressBookList);
+//		mapper.writeValue(new File("abc.json"), addressBookList);
+//		System.out.println("Wrote");
 	}
 	
 }

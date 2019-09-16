@@ -54,10 +54,10 @@ public class AddressBookDemoMain {
 //		}
 		
 		//System.out.println(list.get(0).person.getAddress());
-		long per = list.get(1).person.getContactNumber();
-		System.out.println(per);
-		Address strr = list.get(0).person.getAddress();
-		String s = strr.getState();
+	//	long per = list.get(1).person.getContactNumber();
+	//	System.out.println(per);
+		//Address strr = list.get(0).person.getAddress();
+	//	String s = strr.getState();
 		 System.out.println(s);
 		 //list.get(1);
 		 

@@ -2,28 +2,20 @@ package com.bridgelabz.objectorientation.addressbook;
 
 public class AddressBook 
 {
-	private Person person;
-	private Address address;
-	
-	public Person getPerson() 
-	{
+	PersonInformation person;
+
+	public PersonInformation getPerson() {
 		return person;
 	}
-	
-	public void setPerson(Person person) 
-	{
+
+	public void setPerson(PersonInformation person) {
 		this.person = person;
 	}
-	
-	public Address getAddress() 
+
+	@Override
+	public String toString() 
 	{
-		return address;
+		return "AddressBook [person=" + person.toString() + "]";
 	}
-	
-	public void setAddress(Address address) 
-	{
-		this.address = address;
-	}
-	
 	
 }

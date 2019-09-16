@@ -8,7 +8,7 @@ public class HashMapWork {
 	{
 		System.out.println("Enter The Number");
 		int num = Utility.scanInt();
-		if(num%11)
+		
 
 	}
 

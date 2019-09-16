@@ -32,6 +32,28 @@ public class AddressBookOperations
 //		}
 //	}
 	
+	public void createFile() throws IOException
+	{
+		System.out.println("Enter Name Of The file");
+		String fileName = Utility.scanString();
+		File jsonFile = new File(fileName + ".json");
+		
+		boolean status = jsonFile.createNewFile();
+		
+		if(status == true)
+		{
+			System.out.println("File is Created");
+			System.out.println();
+		}
+		else
+		{
+			System.out.println("File Already Exists");
+			System.out.println();
+		}
+		
+	}
+	
+	
 	public void addPersonToFile(List<AddressBook> person) throws JsonGenerationException, JsonMappingException, IOException
 	{
 		JsonUtility.writeToJsonFile(person);
