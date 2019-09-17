@@ -39,11 +39,11 @@ public class QueueWork {
 		deleted = queue.dequeue();
 		System.out.println("Removed = "+deleted);
 		
-		deleted = queue.dequeue();
-		System.out.println("Removed = "+deleted);
-		
-		deleted = queue.dequeue();
-		System.out.println("Removed = "+deleted);
+//		deleted = queue.dequeue();
+//		System.out.println("Removed = "+deleted);
+//		
+//		deleted = queue.dequeue();
+//		System.out.println("Removed = "+deleted);
 		
 		boolean queueStatus = queue.isEmpty();
 		if(queueStatus==true)
@@ -57,6 +57,10 @@ public class QueueWork {
 		
 		System.out.println("length = "+queue.size);
 		
+		queue.enqueue(100);
+		queue.enqueue(200);
+		queue.enqueue(300);
+		queue.viewQueue();
 	}
 
 }

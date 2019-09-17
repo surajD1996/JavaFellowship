@@ -27,14 +27,16 @@ public class AddressBookOperations
 		objectMapper = new ObjectMapper();
 	}
 	
-	public static void createNewJsonFile() 
+	public static String createNewJsonFile() 
 	{
 		System.out.println("Enter New File Name ");
 		String filePath = Utility.scanString()+".json";
-		
+		//New
+		File jsonFile = new File(filePath);
+		//
 		try
 		{
-			File jsonFile = new File(filePath);
+			
 			boolean status = jsonFile.createNewFile();
 			
 			if(status)
@@ -60,13 +62,12 @@ public class AddressBookOperations
 			System.out.println("Exception Occured while Creating File");
 		}
 		
-		
+		return filePath;
 	}
 
-	public static String openJsonFile() 
+	public static String openJsonFile(String jsonFile) 
 	{
-		System.out.println("Enter File Name To Open ");
-		String jsonFile = Utility.scanString();
+		
 		
 		for(int i = 0; i<fileList.size(); i++)
 		{

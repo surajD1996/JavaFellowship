@@ -1,0 +1,9 @@
+[ {
+  "patientName" : "Ravendra",
+  "patientContact" : 7854785478,
+  "patientID" : 1000
+}, {
+  "patientName" : "Kiran",
+  "patientContact" : 5412547854,
+  "patientID" : 400
+} ]

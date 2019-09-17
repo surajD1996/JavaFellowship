@@ -1,0 +1,46 @@
+[ {
+  "doctorName" : "Mark",
+  "doctorID" : 101,
+  "specialization" : "Hard core Programmming",
+  "availability" : "Never"
+}, {
+  "doctorName" : "Vaibhav",
+  "doctorID" : 102,
+  "specialization" : "Logic",
+  "availability" : "Always"
+}, {
+  "doctorName" : "Ganesh",
+  "doctorID" : 103,
+  "specialization" : "Rada",
+  "availability" : "Yes"
+}, {
+  "doctorName" : "Suraj",
+  "doctorID" : 444,
+  "specialization" : "Lol",
+  "availability" : "AM"
+}, {
+  "doctorName" : "Mark",
+  "doctorID" : 101,
+  "specialization" : "Hard core Programmming",
+  "availability" : "Never"
+}, {
+  "doctorName" : "Vaibhav",
+  "doctorID" : 102,
+  "specialization" : "Logic",
+  "availability" : "Always"
+}, {
+  "doctorName" : "Ganesh",
+  "doctorID" : 103,
+  "specialization" : "Rada",
+  "availability" : "Yes"
+}, {
+  "doctorName" : "Suraj",
+  "doctorID" : 444,
+  "specialization" : "Lol",
+  "availability" : "AM"
+}, {
+  "doctorName" : "Khadake",
+  "doctorID" : 555,
+  "specialization" : "YES",
+  "availability" : "PM"
+} ]
