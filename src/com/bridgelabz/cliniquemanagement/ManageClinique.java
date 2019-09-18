@@ -25,7 +25,7 @@ public class ManageClinique implements IClinique
 	
 	
 	@Override
-	public void addDoctorDetails() throws JsonGenerationException, JsonMappingException, IOException 
+	public void addDoctorDetails() throws JsonGenerationException, JsonMappingException, IOException
 	{
 		File doctorDetails = new File("doctorDetails.json");
 		
@@ -97,7 +97,7 @@ public class ManageClinique implements IClinique
 				searchDoctorBySpecialization();
 				break;
 			case 3:
-				System.out.println("Searching By Specialization ");
+				System.out.println("Searching By Availability ");
 				
 				searchDoctorByAvailability();
 				break;
@@ -107,12 +107,32 @@ public class ManageClinique implements IClinique
 		
 	}
 	
-	private void searchDoctorByAvailability() 
+	private void searchDoctorByAvailability() throws JsonParseException, JsonMappingException, IOException 
 	{
 		System.out.println("Enter The Availablity ");
 		System.out.println("AM or PM ");
+		String doctorAvailability = Utility.scanString();
+		File doctorDetails = new File("doctorsDetails.json");
+		List<DoctorDetails> doctorList = objectMapper.readValue(doctorDetails, new TypeReference<List<DoctorDetails>>() {});
+		boolean status = false;
 		
+		for(DoctorDetails tempList : doctorList)
+		{
+			if(tempList.getAvailability().equalsIgnoreCase(doctorAvailability))
+			{
+				status = true;
+				break;
+			}
+		}
 		
+		if(status == true)
+		{
+			System.out.println("Doctor is available");
+		}
+		else
+		{
+			System.out.println("Doctor is not available");
+		}
 	}
 
 	private void searchDoctorBySpecialization() throws JsonParseException, JsonMappingException, IOException 
@@ -182,7 +202,7 @@ public class ManageClinique implements IClinique
 			}
 	}
 
-	public void searchPatients()
+	public void searchPatients() throws JsonParseException, JsonMappingException, IOException
 	{
 		int choice = 0;
 		System.out.println("1. Search by Name ");
@@ -193,6 +213,7 @@ public class ManageClinique implements IClinique
 		switch(choice)
 		{
 			case 1:
+				System.out.println("Searching Patient by Name");
 				searchPatientByName();
 				break;
 			case 2:
@@ -209,17 +230,38 @@ public class ManageClinique implements IClinique
 
 	private void searchPatientByID() 
 	{
-				
+		
 	}
 
 	private void searchPatientByContact() 
 	{
-				
+			
 	}
 
-	private void searchPatientByName() 
+	private void searchPatientByName() throws JsonParseException, JsonMappingException, IOException 
 	{
-				
+		System.out.println("Enter Name of Patient >>>>>>");
+		String searchPatientName = Utility.scanString();
+		File patientsDetails = new File("searchPatientName.json");
+		List<PatientDetails> tempPatientList = objectMapper.readValue(patientsDetails, new TypeReference<List<PatientDetails>>() {});
+		boolean status = false;
+		for(PatientDetails tempList: tempPatientList)
+		{
+			if(tempList.getPatientName().equalsIgnoreCase(searchPatientName))
+			{
+				status = true;
+				break;
+			}
+		}
+		
+		if(status == true)
+		{
+			System.out.println("Yes");
+		}
+		else
+		{
+			System.out.println("No");
+		}
 	}
 }
 
