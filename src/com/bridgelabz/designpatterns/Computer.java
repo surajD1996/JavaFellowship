@@ -2,8 +2,14 @@ package com.bridgelabz.designpatterns;
 
 public abstract class Computer 
 {
-	public abstract void getRAM();
-	public abstract void getHardDriveSize();
-	public abstract void getCPUInfo();
-
+	
+	public abstract String getRAM();
+	public abstract String getHDD();
+	public abstract String getCPU();
+	
+	@Override
+	public String toString()
+	{
+		return "RAM= "+this.getRAM()+", HDD="+this.getHDD()+", CPU="+this.getCPU();
+	}
 }
