@@ -1,7 +1,5 @@
 package com.bridgelabz.objectorientation;
 
-import java.io.Serializable;
-
 public class InventryWork 
 {
 	private String name;
@@ -36,6 +34,11 @@ public class InventryWork
 	public void setWeight(int weight) 
 	{
 		this.weight = weight;
+	}
+
+	@Override
+	public String toString() {
+		return "InventryWork [name=" + name + ", price=" + price + ", weight=" + weight + "]";
 	}
 	
 	
